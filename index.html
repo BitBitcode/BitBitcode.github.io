@@ -1,26 +1,47 @@
-<!DOCTYPE html>        <!--文件类型-->
+<!DOCTYPE html>
+<!--文件类型-->
 <html lang=en>
 
-<head>                              <!--网页头部-->
+<head>
     <!-- Standard Meta -->
-    <meta charset = "UTF-8">
+    <meta charset="UTF-8">
     <!--调用CSS文件（不成对标签）-->
     <link href="semantic.css" rel="stylesheet" type="text/css">
     <!--注意：由于在同一文件夹下，这里CSS文件的地址是相对地址-->
+
+    <!--Dreamweaver 生成的 CSS 样式文件（开始）-->
+    <style type="text/css">
+        #start {
+            height: 562px;
+            width: 1000px;
+            position: fixed;
+            background-color: rgba(230, 230, 230, 1.00);
+            background-image: url(\images\homepage-head-1920X1080.png);
+            background-repeat: no-repeat;
+            text-align: center;
+            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+            background-attachment: scroll;
+        }
+    </style>
+    <!--Dreamweaver 生成的 CSS 样式文件（结束）-->
 </head>
 
-<body>                              <!--网页主体-->
-    <!--网页页眉-->
+<body>
+    <!--页眉与导航栏（开始）-->
     <div class="ui menu">
-        <div class="header item">KC的个人主页</div>
-        <a class="active item">Link</a>
-        <a class="item">Link</a>
-        <div tabindex="0" class="ui dropdown item">
-            Dropdown
+        <div class="header item" href="index.html">BitBitcode的个人主页</div>
+        <a class="active item">首  页</a>
+        <a class="item" href="Menu_Pages\C_and_C++.html">C语言/C++</a>
+        <a class="item" href="Menu_Pages\CMD.html">CMD批处理</a>
+        <a class="item" href="Menu_Pages\Python.html">Python</a>
+        <a class="item" href="Menu_Pages\lyrics.html">歌  词</a>
+        <a class="item" href="Menu_Pages\Others.html">其  他</a>
+        <!--抽屉型下拉式菜单（开始）-->
+        <div tabindex="0" class="ui dropdown item">文艺街区
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <div class="item">Action</div>
-                <div class="item">Another Action</div>
+                <div class="item">小清新</div>
+                <div class="item">歌 词</div>
                 <div class="item">Something else here</div>
                 <div class="divider"></div>
                 <div class="item">Separated Link</div>
@@ -28,17 +49,27 @@
                 <div class="item">One more separated link</div>
             </div>
         </div>
+        <!--抽屉型下拉式菜单（结束）-->
         <div class="right menu">
             <div class="item">
                 <div class="ui action left icon input">
                     <i class="search icon"></i>
-                    <input type="text" placeholder="Search">
-                    <button class="ui button">Submit</button>
+                    <input type="text" placeholder="点我输入">
+                    <button class="ui button">搜索</button>
                 </div>
             </div>
-            <a class="item">Link</a>
+            <a class="item" href="http://github.com/BitBitcode">作者的GitHub</a>
         </div>
     </div>
+    <!--页眉与导航栏（结束）-->
+
+    <div id="start">
+        <p
+            style="font-size: 100px; text-align: center; color: rgba(255,255,255,1.00); font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; font-style: normal; text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
+            欢迎访问&nbsp;</p>
+    </div>
+    
+
 
 </body>
 </html>
