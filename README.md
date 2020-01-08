@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# @BitBitcode 的个人网页
+---
 
-You can use the [editor on GitHub](https://github.com/BitBitcode/BitBitcode.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 关  于
+  + 该个人网页是利用 GitHub 提供的 “GitHub Pages” 来部署的
+  + 网页的 CSS 样式基于 “Semantic UI”
+  + 网页的主要目的是了解 HTML 的基本原理，验证技术可行性，不要纠结内容
+  + 网页仍处在开发阶段
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## 更新日志
+  + 2020.1.8 发布
+    - 个人网页正式部署
+    - 基于 Semantic UI 构建了主页
+    - 后续仍将继续更新
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## 更多信息
+  + **关于 Semantic UI**
+    + Semantic UI 提供了大量成熟的设计组件，可以简化网页部署过程
+    + 若要使用 Semantic UI 中的代码、组件构建自己的网页，需要将 semantic.css 样式文件上传到包含你网页的 GitHub 仓库中，并在 HTML 的头部标签中引用该文件
+    + 官方网站：[Semantic UI](https://semantic-ui.com)（如果链接打不开请手动输入：https://semantic-ui.com ）
 
-- Bulleted
-- List
+  + **原创代码清单**
+    + 未完待续。。。
+  + **原创文章清单**
+    + 未完待续。。。
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BitBitcode/BitBitcode.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## 版权信息
+  + **Semantic UI**：
+    + semantic.css 样式文件，以及基于 Semantic UI 网站构建的部分，代码版权归原网站、作者所有，请勿商用！
+  + **原创代码与文章**
+    + 转载请注明作者及出处
+    + Copyright ©2020 BitBitcode.
