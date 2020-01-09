@@ -7,29 +7,21 @@
     <meta charset="UTF-8">
     <!--调用CSS文件（不成对标签）-->
     <link href="semantic.css" rel="stylesheet" type="text/css">
+    <link href="homepage_style.css" rel="stylesheet">
     <!--注意：由于在同一文件夹下，这里CSS文件的地址是相对地址-->
 
     <!--CSS 样式文件（开始）-->
     <!--定义ID为 “start” 的 div 的样式-->
     <!--定义网页主体的背景图片-->
-    <!--一定要注意 url 的斜杠是 “/” ！！！-->
+    <!--一定要注意 url 的斜杠是“÷”的斜杠：“/” 否则找不到路径！！！-->
     <style type="text/css">
-        #start {
-            height: 100%;
-            width: 100%;
-            background-color: rgba(223, 237, 249, 0.8);
-            background-image: url("images/homepage-head-mountain-1920X1080.jpg");
-            background-repeat: no-repeat;
-            text-align: center;
-            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
-            background-attachment: scroll;
-        }
 
-        body {
-            background: url(images/background-1920X1280.png) no-repeat center 0
-        }
+
     </style>
     <!--CSS 样式文件（结束）-->
+
+    <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
+    <title>BitBitcode的个人主页(^_^)</title>
 </head>
 
 <body>
@@ -74,7 +66,8 @@
     <!--页眉与导航栏（结束）-->
 
     <!--开头部分（开始）-->
-    <div>
+    <div class="background_img">  </div>
+    <div id="start">
         <!--
             font-size：设置文字高度
             text-align:center：水平对齐方式为居中
@@ -99,7 +92,7 @@
             padding设置文字起始的位置
             text-indent:2em：缩进两字符
         -->
-        <p style="
+        <div style="
             font-size: 18px;
             padding-left: 30%;
             padding-bottom: 15%;
@@ -108,12 +101,16 @@
             color: rgba(44,96,169,1.00);
             font-style: normal
         ">
-            梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
-            王国维用三句情诗表现了 “悬思——苦索——顿悟” 的治学三重境界：<br>
-            昨夜西风凋碧树。独上高楼，望尽天涯路。<br>
-            衣带渐宽终不悔，为伊消得人憔悴。<br>
-            众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。<br>
-        </p>
+            <p>
+                梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
+                王国维用三句情诗表现了 “悬思——苦索——顿悟” 的治学三重境界：<br>
+            </p>
+            <ul>
+                <li>昨夜西风凋碧树。独上高楼，望尽天涯路。</li>
+                <li>衣带渐宽终不悔，为伊消得人憔悴。</li>
+                <li>众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</li>
+            </ul>
+        </div>
     </div>
     <!--开头部分（结束）-->
 
@@ -149,7 +146,7 @@
                 <p>
                     Yes, that's right.<br>
                     生活不止眼前的苟且，还有诗和远方！<br>
-                    所以，除了编程,我还分享了一些自己喜欢的文章、歌词、图片等等<br>
+                    所以，除了编程，我还分享了一些自己喜欢的文章、歌词、图片等等<br>
                     <br>
                 </p>
             </div>
@@ -191,8 +188,14 @@
     </div>
     -->
 
-    <div class="ui horizontal divider"> Copyright ©2020 BitBitcode. </div>
     <!--请借鉴GitHub的页脚，两边写字，中间有图标-->
+    <div class="ui horizontal divider"> </div>
+    <footer class="myfooter">
+        <span style="vertical-align:middle"> Copyright ©2019~2020 BitBitcode.</span>
+        <img src="images\Logo.png" width="40px" height=40px" style="vertical-align:middle">
+        <span style="vertical-align:middle"> E-mail: smilewwc@qq.com </span>
+    </footer>
+
 </body>
 
 </html>
