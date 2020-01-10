@@ -1,6 +1,7 @@
 /*自定义的主页样式*/
 
 /*规定 “类” 为 “background_img” 的样式，此处用来实现自动调整大小的背景图片*/
+/*一定要注意 url 的斜杠是“÷”的斜杠：“/” 否则找不到路径！！！*/
 .background_img {
     position:fixed;
     top: 0;
@@ -11,7 +12,7 @@
     z-index:-10;
     zoom: 1;
     background-color: rgb(255, 0, 0);
-    background: url(images/background-1920X1280-small.png) no-repeat;
+    background: url(images/background2-1920X1280-small.png) no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -42,8 +43,10 @@
 
 /*通用网页主体容器*/
 .mainbody{
-    background-color: rgba(240,248,255,0.8);
-    padding-top: 5%;
+    background-color: rgba(240,248,255,0.6);
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 10%;
 }
 

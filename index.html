@@ -5,26 +5,20 @@
 <head>
     <!-- Standard Meta -->
     <meta charset="UTF-8">
-    <!--调用CSS文件（不成对标签）-->
-    <link href="semantic.css" rel="stylesheet" type="text/css">
-    <link href="homepage_style.css" rel="stylesheet">
-    <link href="dist\components\container.css" rel="stylesheet">
-    <!--注意：由于在同一文件夹下，这里CSS文件的地址是相对地址-->
 
+
+    <!--调用 CSS 样式文件-->
+    <link href="semantic.css" rel="stylesheet" type="text/css">
+    <link href="homepage_style.css" rel="stylesheet" type="text/css">
+
+    <!--调用 JavaScript 文件-->
     <script src="JavaScript\jquery-3.1.1.js"></script>
     <script src="JavaScript\semantic.js"></script>
-    <!--CSS 样式文件（开始）-->
-    <!--定义ID为 “start” 的 div 的样式-->
-    <!--定义网页主体的背景图片-->
-    <!--一定要注意 url 的斜杠是“÷”的斜杠：“/” 否则找不到路径！！！-->
-    <style type="text/css">
+    <!--注意：由于在同一目录下，这里文件地址都是相对地址-->
 
-
-    </style>
-    <!--CSS 样式文件（结束）-->
 
     <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
-    <title>BitBitcode的个人主页(^_^)</title>
+    <title>BitBitcode个人主页(^_^)</title>
 </head>
 
 <body>
@@ -77,13 +71,13 @@
         text-shadow：设置文字阴影：垂直距离，水平距离，模糊半径，阴影颜色
         -->
         <p style="
-        font-size: 80px;
+        font-size: 90px;
         text-align: center;
-        line-height: 80px;
-        color: rgba(44,96,169,1); 
+        line-height: 100px;
+        color: rgba(255,255,255,1); 
         font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;
         font-style: normal; 
-        text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
+        text-shadow: 7px 7px 5px rgba(0,0,0,1.00);">
             <br>
             <br>
             <br>
@@ -100,17 +94,17 @@
         padding-bottom: 15%;
         text-align: left;
         line-height: 130%;
-        color: rgba(44,96,169,1.00);
-        font-style: normal
-    ">
-            <p>
-                梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
-                王国维用三句情诗表现了 “悬思——苦索——顿悟” 的治学三重境界：<br>
-            </p>
+        color: rgba(255,255,255,1);
+        font-style: normal;
+        text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
             <ul>
-                <li>昨夜西风凋碧树。独上高楼，望尽天涯路。</li>
-                <li>衣带渐宽终不悔，为伊消得人憔悴。</li>
-                <li>众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</li>
+                <li>梦想，再大也不嫌大，追梦的人，再小也不算小。<br></li>
+                <li>王国维用三句情诗表现了 “悬思——苦索——顿悟” 的治学三重境界：</li>
+                <ul>
+                    <li>昨夜西风凋碧树。独上高楼，望尽天涯路。</li>
+                    <li>衣带渐宽终不悔，为伊消得人憔悴。</li>
+                    <li>众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</li>
+                </ul>
             </ul>
         </div>
     </div>
@@ -119,7 +113,7 @@
 
     <!--正文部分（开始）-->
     <div class="mainbody">
-        <h2 class="ui dividing header" style="text-align:center;">这里有什么？</h2>
+        <!--正文部分（1）-->
         <div class="ui vertical stripe segment" style="padding-top: 5%; padding-bottom: 5%;">
             <div class="ui middle aligned stackable grid container">
                 <div class="row">
@@ -142,13 +136,13 @@
                             <br>
                         </p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
 
-
-        <div class="ui vertical stripe quote segment"style="padding-top: 5%; padding-bottom: 5%;">
+        <!--正文部分（2）-->
+        <div class="ui vertical stripe quote segment" style="padding-top: 5%; padding-bottom: 5%;">
             <div class="ui equal width stackable internally celled grid">
                 <div class="center aligned row">
                     <div class="column">
@@ -157,7 +151,8 @@
                             “如果你不能做到完美，至少做到看起来还可以。”
                         </h3>
                         <p>
-                            <img class="ui avatar image" src="images\Bill Gates.jpg"> <b>比尔·盖茨（Bill Gates）</b>微软（Microsoft）创始人
+                            <img class="ui avatar image" src="images\Bill Gates.jpg"> <b>比尔·盖茨（Bill
+                                Gates）</b>微软（Microsoft）创始人
                         </p>
                     </div>
                     <div class="column">
@@ -167,13 +162,13 @@
                         </h3>
                         <p>梅赛德斯-奔驰（Mercedes-Benz）广告语</p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
 
-
-        <div class="ui vertical stripe segment"style="padding-top: 5%; padding-bottom: 5%;">
+        <!--正文部分（3）-->
+        <div class="ui vertical stripe segment" style="padding-top: 5%; padding-bottom: 5%;">
             <div class="ui text container">
                 <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
                 <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing
@@ -191,8 +186,8 @@
                 <a class="ui large button">I'm Still Quite Interested</a>
             </div>
         </div>
-        <!--正文部分（结束）-->
     </div>
+    <!--正文部分（结束）-->
 
 
     <!--页脚部分（开始）-->
@@ -206,27 +201,25 @@
                         <a class="item" href="#">服务器支持：GitHub Pages</a>
                         <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
                         <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
-                        <a class="item" href="https://www.microsoft.com/zh-cn/software-download/windows10">开发环境：Windows
-                            10</a>
+                        <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
                     </div>
                 </div>
                 <div class="three wide column">
                     <h4 class="ui inverted header">联系作者</h4>
                     <div class="ui inverted link list">
-                        <a class="item" href="#">E-mail: smilewwc@qq.com</a>
-                        <a class="item" href="#">Telephone：000000（示例）</a>
-                        <a class="item" href="#">邮编：111111（示例）</a>
-                        <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
+                        <a class="item">E-mail: smilewwc@qq.com</a>
+                        <a class="item">Telephone：000000（示例）</a>
+                        <a class="item">邮编：111111（示例）</a>
+                        <a class="item">地址：中国-China</a>
                     </div>
                 </div>
                 <div class="seven wide column">
                     <h4 class="ui inverted header">版权信息</h4>
-                    <p>Copyright ©2019~2020 BitBitcode.</p>
+                    <p>
+                        Semantic UI样式版权归原网站所有，请勿商用！<br>
+                        Copyright ©2019~2020 BitBitcode.
+                    </p>
                 </div>
-                <span style="vertical-align:middle">
-                    <img src="images\Logo.png" width="40px" height=40px" style="vertical-align:middle">
-                </span>
-                
             </div>
         </div>
     </div>
