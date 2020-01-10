@@ -6,14 +6,54 @@
     <!-- Standard Meta -->
     <meta charset="UTF-8">
     <!--调用CSS文件（不成对标签）-->
+    <link href="essay_style.css" rel="stylesheet">
     <link href="..\semantic.css" rel="stylesheet" type="text/css">
-    <link href="..\homepage_style.css" rel="stylesheet">
+
+    <script src="..\JavaScript\jquery-3.1.1.js"></script>
+    <script src="..\JavaScript\semantic.js"></script>
+    <script src="..\JavaScript\iframe.js"></script>
+    <script src="..\JavaScript\dropdown.js"></script>
+    <script src="..\JavaScript\visibility.js"></script>
     <!--注意：由于在同一文件夹下，这里CSS文件的地址是相对地址-->
 
 </head>
 
 <!--考虑加入阅读量，好评，分享等-->
 <body>
+    <!-- 浮动菜单 -->
+    
+    <div class="ui inverted grey fixed nine item menu">
+        <div class="header item">Brand</div>
+        <div class="active item">Link</div>
+        <a class="item">Link</a>
+        <div tabindex="0" class="ui dropdown item">
+            Dropdown
+            <i class="dropdown icon"></i>
+            <div tabindex="-1" class="menu transition hidden">
+                <div class="item">Action</div>
+                <div class="item">Another Action</div>
+                <div class="item">Something else here</div>
+                <div class="divider"></div>
+                <div class="item">Separated Link</div>
+                <div class="divider"></div>
+                <div class="item">One more separated link</div>
+            </div>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent inverted icon input">
+                    <i class="search icon"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <a class="item">Link</a>
+        </div>
+    </div>
+
+    <div id="start">
+        <div style="background-color: rgba(255, 255, 255, 1);"></div>
+        <img id="Gass_Blur" src="..\images\为世界上所有的美好而战.png">
+    </div>
     <div class="background_img"> </div>
     <div class="mainbody">
         <div class="ui piled segment">
@@ -125,4 +165,12 @@
             </p>
         </div>
     </div>
+
+    <script>
+        $('iframe').iFrameResize({
+            autoResize: true,
+            checkOrigin: false,
+            heightCalculationMethod: 'bodyScroll'
+        });
+    </script>
 </body>
