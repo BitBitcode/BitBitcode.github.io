@@ -6,53 +6,149 @@
     <!-- Standard Meta -->
     <meta charset="UTF-8">
 
+    <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
+    <title> BitBitcode个人主页(^_^) </title>
+
 
     <!--调用 CSS 样式文件-->
-    <link href="semantic.css" rel="stylesheet" type="text/css">
-    <link href="homepage_style.css" rel="stylesheet" type="text/css">
+    <link href="CSS_files\semantic.css" rel="stylesheet" type="text/css">
+    <link href="CSS_files\homepage.css" rel="stylesheet" type="text/css">
+
 
     <!--调用 JavaScript 文件-->
-    <script src="JavaScript\jquery-3.1.1.js"></script>
-    <script src="JavaScript\semantic.js"></script>
-    <!--注意：由于在同一目录下，这里文件地址都是相对地址-->
+    <!--注意：“jquery-3.1.1.js”和“semantic.js”的调用顺序不能变！！！-->
+    <script src="JavaScript_files\jquery-3.1.1.js"> </script>
+    <script src="JavaScript_files\semantic.js"> </script>
 
 
-    <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
-    <title>BitBitcode个人主页(^_^)</title>
+    <!--含有JavaScript效果组件还需要单独调用-->
+    <script>
+        $(document)
+            .ready(function () {
+                $('.ui.menu .ui.dropdown')
+                    .dropdown({
+                    on: 'hover'
+                });
+                $('.ui.menu a.item')
+                    .on('click', function () {
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active')
+                            ;
+                    })
+                    ;
+            })
+            ;
+        
+    </script>
+
+    <!--过渡效果（技术问题，没有看到效果）-->
+    <script>
+        $('.headline')
+            .transition({
+                animation: 'zoom',
+                duration: '1s',
+            })
+            ;
+    </script>
+
+
+    <!--内部样式定义-->
+    <style>
+        
+        body {
+            padding: 0em;
+        }
+
+        .ui.menu {
+            margin: 3em 0em;
+            border-style: solid;
+            border-width: 2px;
+            /*设置菜单栏两边的距离，类似居中的效果*/
+            padding-right: 10%;
+            padding-left: 10%;
+        }
+
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
+    </style>
+
+    <style type="text/css">
+        body>.ui.container {
+            margin-top: 3em;
+        }
+    
+        iframe {
+            border: none;
+            width: calc(100% + 2em);
+            margin: 0em -1em;
+            height: 300px;
+        }
+    
+        iframe html {
+            overflow: hidden;
+        }
+    
+        iframe body {
+            padding: 0em;
+        }
+    
+        .ui.container>h1 {
+            font-size: 3em;
+            text-align: center;
+            font-weight: normal;
+        }
+    
+        .ui.container>h2.dividing.header {
+            font-size: 2em;
+            font-weight: normal;
+            margin: 4em 0em 3em;
+        }
+
+        .ui.table {
+            table-layout: fixed;
+        }
+    </style>
 </head>
 
 <body>
     <!--全页面背景-->
-    <div class="background_img"> </div>
+    <div class="background"> </div>
 
 
     <!--页眉与导航栏（开始）-->
     <div class="ui inverted grey fixed menu">
+        <!--单项菜单-->
         <div class="header item">BitBitcode</div>
         <div class="active item">首 页</div>
-        <a class="item" href="(0)Menu_Pages\C_and_C++.html"> C/C++</a>
-        <a class="item" href="(0)Menu_Pages\CMD.html"> CMD</a>
-        <a class="item" href="(0)Menu_Pages\Python.html"> Python </a>
-        <a class="item" href="(0)Menu_Pages\Article.html"> 文 章</a>
-        <div tabindex="0" class="ui dropdown item" href="(0)Menu_Pages\Others.html">
+        <a class="item" href="(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+        <a class="item" href="(0)Menu_Pages\(2)CMD.html"> CMD </a>
+        <a class="item" href="(0)Menu_Pages\(3)Python.html"> Python </a>
+        <a class="item" href="(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
+
+        <!--下拉菜单-->
+        <div tabindex="0" class="ui dropdown item" >
             其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <div class="item">Action</div>
-                <div class="item">Another Action</div>
-                <div class="item">Something else here</div>
+                <a class="item"> 有趣的话 </a>
+                <a class="item"> 歌词分享 </a>
+                <a class="item"> 壁纸分享 </a>
                 <div class="divider"></div>
-                <div class="item">Separated Link</div>
+                <a class="item" href="(0)Menu_Pages\(5)Others.html">其 他</a>
                 <div class="divider"></div>
-                <div class="item">One more separated link</div>
+                <a class="item" href="README.md">关于本站</a>
             </div>
         </div>
+
+        <!--右边搜索栏和链接-->
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent inverted icon input">
-                    <i class="search icon"></i>
                     <input type="text" placeholder="点我搜索哦">
-                    <button class="ui inverted grey button visible">提交</button>
+                    <button class="ui grey icon button"><i class="search icon"></i></button>
                 </div>
             </div>
             <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
@@ -64,24 +160,21 @@
     <!--开头部分（开始）-->
     <div id="start">
         <!--
-        font-size：设置文字高度
+        font-size：设置文字高度（字体大小）
         text-align:center：水平对齐方式为居中
         line-height:100px，设置行高为固定值
         color:rgba(44,96,169,1)：设置颜色，参数分别为：（红，绿，蓝，透明度）
         text-shadow：设置文字阴影：垂直距离，水平距离，模糊半径，阴影颜色
         -->
-        <p style="
-        font-size: 90px;
+        <p class=" ui headline visible transition" style="
+        font-size: 80px;
         text-align: center;
         line-height: 100px;
         color: rgba(255,255,255,1);
         font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;
-        font-style: normal; 
+        font-style: normal;
         text-shadow: 7px 7px 5px rgba(0,0,0,1.00);">
-            <br>
-            <br>
-            <br>
-            为世界上所有的美好而战！
+            为世界上所有的美好而战
         </p>
 
         <!--
@@ -89,33 +182,33 @@
         text-indent:2em：缩进两字符
         -->
         <div style="
-        font-size: 18px;
-        padding-left: 30%;
-        padding-bottom: 15%;
-        text-align: left;
-        line-height: 130%;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
         color: rgba(255,255,255,1);
         font-style: normal;
         text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
-            <ul>
-                <li>梦想，再大也不嫌大，追梦的人，再小也不算小。<br></li>
-                <li>王国维用三句情诗表现了 “悬思——苦索——顿悟” 的治学三重境界：</li>
-                <ul>
-                    <li>昨夜西风凋碧树。独上高楼，望尽天涯路。</li>
-                    <li>衣带渐宽终不悔，为伊消得人憔悴。</li>
-                    <li>众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</li>
-                </ul>
-            </ul>
+            梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
+        </div>
+
+        <!--向下箭头-->
+        <div style="
+            text-align: center; 
+            color: rgba(255,255,255,0.4);
+            position: absolute; 
+            width: 100%; 
+            bottom:10px">
+            <i class="huge angle double down icon"> </i>
         </div>
     </div>
     <!--开头部分（结束）-->
 
 
     <!--正文部分（开始）-->
-    <div class="MFD_Light_alpha-40">
+    <div class="MFD_Light_Navigation">
         <h1> 在这里，你可以做什么 </h1>
     </div>
-    <div class="MFD_Light_alpha-80">
+    <div class="MFD_Light_Content">
         <!--正文部分（1）-->
         <div class="ui vertical stripe segment" style="padding-top: 10%; padding-bottom: 10%;">
             <div class="ui middle aligned stackable grid container">
@@ -228,8 +321,6 @@
         </div>
     </div>
     <!--页脚部分（结束）-->
-
-
 </body>
 
 </html>
