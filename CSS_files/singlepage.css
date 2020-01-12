@@ -28,7 +28,7 @@
 
     /*设置背景图片：平铺，不重复。并设置背景色，当加载缓慢或者加载不出图片时可以有个代替的底色*/
     /*一定要注意 url 的斜杠是“÷”的斜杠：“/” 否则找不到路径！！！*/
-    background: url(../images/background-3-1920X1280-small.jpg) no-repeat;
+    background: url(../images/background-3-1920X1280-small.png) no-repeat;
     background-color: rgba(208,229,247,1);
 
     /*上面三句是一个意思：让图片随屏幕大小同步缩放，
