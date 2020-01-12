@@ -1,0 +1,22 @@
+/*随笔散文的模板*/
+
+#start{
+    margin-bottom: 5px;
+}
+
+/*试水一下模糊滤镜（实现PPT中那种模糊块的效果）*/
+#Gass_Blur {
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*通用网页主体容器*/
+.mainbody{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+/*字体，字号，颜色，边距等*/

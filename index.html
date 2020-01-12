@@ -5,197 +5,322 @@
 <head>
     <!-- Standard Meta -->
     <meta charset="UTF-8">
-    <!--调用CSS文件（不成对标签）-->
-    <link href="semantic.css" rel="stylesheet" type="text/css">
-    <link href="homepage_style.css" rel="stylesheet">
-    <!--注意：由于在同一文件夹下，这里CSS文件的地址是相对地址-->
-
-    <!--CSS 样式文件（开始）-->
-    <!--定义ID为 “start” 的 div 的样式-->
-    <!--定义网页主体的背景图片-->
-    <!--一定要注意 url 的斜杠是“÷”的斜杠：“/” 否则找不到路径！！！-->
-    <style type="text/css">
-
-
-    </style>
-    <!--CSS 样式文件（结束）-->
 
     <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
-    <title>BitBitcode的个人主页(^_^)</title>
+    <title> BitBitcode个人主页(^_^) </title>
+
+
+    <!--调用 CSS 样式文件-->
+    <link href="CSS_files\semantic.css" rel="stylesheet" type="text/css">
+    <link href="CSS_files\homepage.css" rel="stylesheet" type="text/css">
+
+
+    <!--调用 JavaScript 文件-->
+    <!--注意：“jquery-3.1.1.js”和“semantic.js”的调用顺序不能变！！！-->
+    <script src="JavaScript_files\jquery-3.1.1.js"> </script>
+    <script src="JavaScript_files\semantic.js"> </script>
+
+
+    <!--含有JavaScript效果组件还需要单独调用-->
+    <script>
+        $(document)
+            .ready(function () {
+                $('.ui.menu .ui.dropdown')
+                    .dropdown({
+                    on: 'hover'
+                });
+                $('.ui.menu a.item')
+                    .on('click', function () {
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active')
+                            ;
+                    })
+                    ;
+            })
+            ;
+        
+    </script>
+
+    <!--过渡效果（技术问题，没有看到效果）-->
+    <script>
+        $('.headline')
+            .transition({
+                animation: 'zoom',
+                duration: '1s',
+            })
+            ;
+    </script>
+
+
+    <!--内部样式定义-->
+    <style>
+        
+        body {
+            padding: 0em;
+        }
+
+        .ui.menu {
+            margin: 3em 0em;
+            border-style: solid;
+            border-width: 2px;
+            /*设置菜单栏两边的距离，类似居中的效果*/
+            padding-right: 10%;
+            padding-left: 10%;
+        }
+
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
+    </style>
+
+    <style type="text/css">
+        body>.ui.container {
+            margin-top: 3em;
+        }
+    
+        iframe {
+            border: none;
+            width: calc(100% + 2em);
+            margin: 0em -1em;
+            height: 300px;
+        }
+    
+        iframe html {
+            overflow: hidden;
+        }
+    
+        iframe body {
+            padding: 0em;
+        }
+    
+        .ui.container>h1 {
+            font-size: 3em;
+            text-align: center;
+            font-weight: normal;
+        }
+    
+        .ui.container>h2.dividing.header {
+            font-size: 2em;
+            font-weight: normal;
+            margin: 4em 0em 3em;
+        }
+
+        .ui.table {
+            table-layout: fixed;
+        }
+    </style>
 </head>
 
 <body>
+    <!--全页面背景-->
+    <div class="background"> </div>
+
+
     <!--页眉与导航栏（开始）-->
-    <div class="ui menu">
-        <div class="header item">
-            <!--网页左上角的徽标-->
-            <img src="images\Logo.png" width="30px" height=30px" style="vertical-align:middle">
-            <span style="font-size: 30px ; vertical-align:middle"> BitBitcode </span>
-        </div>
-        <a class="active item" href="index.html" style="font-size:20px; vertical-align:middle"> 首 页 </a>
-        <a class="item" href="Menu_Pages\C_and_C++.html" style="font-size:20px; vertical-align:middle"> C/C++ </a>
-        <a class="item" href="Menu_Pages\CMD.html" style="font-size:20px; vertical-align:middle"> CMD</a>
-        <a class="item" href="Menu_Pages\Python.html" style="font-size:20px; vertical-align:middle"> Python </a>
-        <a class="item" href="Menu_Pages\Lyrics.html" style="font-size:20px; vertical-align:middle"> 歌 词 </a>
-        <a class="item" href="Menu_Pages\Others.html" style="font-size:20px; vertical-align:middle"> 其 他 </a>
-        <!--抽屉型下拉式菜单（开始）
-        <div tabindex="0" class="ui dropdown item"> <h2>文艺街区</h2>
+    <div class="ui inverted grey fixed menu">
+        <!--单项菜单-->
+        <div class="header item">BitBitcode</div>
+        <div class="active item">首 页</div>
+        <a class="item" href="(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+        <a class="item" href="(0)Menu_Pages\(2)CMD.html"> CMD </a>
+        <a class="item" href="(0)Menu_Pages\(3)Python.html"> Python </a>
+        <a class="item" href="(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
+
+        <!--下拉菜单-->
+        <div tabindex="0" class="ui dropdown item" >
+            其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <div class="item">小清新</div>
-                <div class="item">歌 词</div>
-                <div class="item">Something else here</div>
+                <a class="item"> 有趣的话 </a>
+                <a class="item"> 歌词分享 </a>
+                <a class="item"> 壁纸分享 </a>
                 <div class="divider"></div>
-                <div class="item">Separated Link</div>
+                <a class="item" href="(0)Menu_Pages\(5)Others.html">其 他</a>
                 <div class="divider"></div>
-                <div class="item">One more separated link</div>
+                <a class="item" href="README.md">关于本站</a>
             </div>
         </div>
-        抽屉型下拉式菜单（结束）-->
+
+        <!--右边搜索栏和链接-->
         <div class="right menu">
             <div class="item">
-                <div class="ui action left icon input">
-                    <i class="search icon"></i>
-                    <input type="text" placeholder="点我输入">
-                    <button class="ui button">搜索</button>
+                <div class="ui transparent inverted icon input">
+                    <input type="text" placeholder="点我搜索哦">
+                    <button class="ui grey icon button"><i class="search icon"></i></button>
                 </div>
             </div>
-            <a class="item" href="http://github.com/BitBitcode"> 作者的GitHub主页 </a>
+            <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
         </div>
     </div>
     <!--页眉与导航栏（结束）-->
 
+
     <!--开头部分（开始）-->
-    <div class="background_img">  </div>
     <div id="start">
         <!--
-            font-size：设置文字高度
-            text-align:center：水平对齐方式为居中
-            line-height:100px，设置行高为固定值
-            color:rgba(44,96,169,1)：设置颜色，参数分别为：（红，绿，蓝，透明度）
-            text-shadow：设置文字阴影：垂直距离，水平距离，模糊半径，阴影颜色
+        font-size：设置文字高度（字体大小）
+        text-align:center：水平对齐方式为居中
+        line-height:100px，设置行高为固定值
+        color:rgba(44,96,169,1)：设置颜色，参数分别为：（红，绿，蓝，透明度）
+        text-shadow：设置文字阴影：垂直距离，水平距离，模糊半径，阴影颜色
         -->
-        <p style="
-            font-size: 80px;
-            text-align: center;
-            line-height: 100px;
-            color: rgba(44,96,169,1); 
-            font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;
-            font-style: normal; 
-            text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
-            <br>
-            <br>
-            为世界上所有的美好而战！
+        <p class=" ui headline visible transition" style="
+        font-size: 80px;
+        text-align: center;
+        line-height: 100px;
+        color: rgba(255,255,255,1);
+        font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;
+        font-style: normal;
+        text-shadow: 7px 7px 5px rgba(0,0,0,1.00);">
+            为世界上所有的美好而战
         </p>
 
         <!--
-            padding设置文字起始的位置
-            text-indent:2em：缩进两字符
+        padding设置文字起始的位置
+        text-indent:2em：缩进两字符
         -->
         <div style="
-            font-size: 18px;
-            padding-left: 30%;
-            padding-bottom: 15%;
-            text-align: left;
-            line-height: 130%;
-            color: rgba(44,96,169,1.00);
-            font-style: normal
-        ">
-            <p>
-                梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
-                王国维用三句情诗表现了 “悬思——苦索——顿悟” 的治学三重境界：<br>
-            </p>
-            <ul>
-                <li>昨夜西风凋碧树。独上高楼，望尽天涯路。</li>
-                <li>衣带渐宽终不悔，为伊消得人憔悴。</li>
-                <li>众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</li>
-            </ul>
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: rgba(255,255,255,1);
+        font-style: normal;
+        text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
+            梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
+        </div>
+
+        <!--向下箭头-->
+        <div style="
+            text-align: center; 
+            color: rgba(255,255,255,0.4);
+            position: absolute; 
+            width: 100%; 
+            bottom:10px">
+            <i class="huge angle double down icon"> </i>
         </div>
     </div>
     <!--开头部分（结束）-->
 
-    <!--已经弃用的开头部分（由Dreamwaver生成）
-    <div id="start">
-        <p style="font-size: 150px;
-                    text-align: center;
-                    line-height: 562px;
-                    color: rgba(255,255,255,1.00); 
-                    font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
-                    font-style: normal; 
-                    text-shadow: 4px 4px 8px rgba(0,0,0,1.00);">
-            欢 迎 访 问
-        </p>
+
+    <!--正文部分（开始）-->
+    <div class="MFD_Light_Navigation">
+        <h1> 在这里，你可以做什么 </h1>
     </div>
-    -->
+    <div class="MFD_Light_Content">
+        <!--正文部分（1）-->
+        <div class="ui vertical stripe segment" style="padding-top: 10%; padding-bottom: 10%;">
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <div class="six wide left floated column">
+                        <img class="ui large bordered rounded image" src="images\chatu.jpg">
+                    </div>
+                    <div class="eight wide column">
+                        <h3 class="ui header">这里有一些我的总结</h3>
+                        <p>
+                            对于从未接触过编程的人来说，看到密密麻麻的代码是一点兴趣都没有的<br>
+                            而即使耐下心来努力学习，也还是会四处碰壁<br>
+                            其实你遇到的很多问题，大家都遇到过并且解决了<br>
+                            所以，去找一些分享经验的帖子就很有帮助<br>
+                        </p>
+                        <h3 class="ui header">也有一些与编程无关的分享</h3>
+                        <p>
+                            Yes, that's right.<br>
+                            生活不止眼前的苟且，还有诗和远方！<br>
+                            所以，除了编程，我还分享了一些自己喜欢的文章、歌词、图片等等<br>
+                            <br>
+                        </p>
+                    </div>
 
-    <!--水平分割条-->
-    <div class="ui horizontal divider"> 在这个网页你可以做什么？ </div>
-    
-
-    <div class="ui middle aligned stackable grid container" style="padding-left: 15%; padding-right: 15%">
-        <div class="row">
-            <div class="eight wide column">
-                <h3 class="ui header">这里有一些我的总结</h3>
-                <p>
-                    对于从未接触过编程的人来说，看到密密麻麻的代码是一点兴趣都没有的<br>
-                    而即使耐下心来努力学习，也还是会四处碰壁<br>
-                    其实你遇到的很多问题，大家都遇到过并且解决了<br>
-                    所以，去找一些分享经验的帖子就很有帮助<br>
-                </p>
-                <h3 class="ui header">也有一些与编程无关的分享</h3>
-                <p>
-                    Yes, that's right.<br>
-                    生活不止眼前的苟且，还有诗和远方！<br>
-                    所以，除了编程，我还分享了一些自己喜欢的文章、歌词、图片等等<br>
-                    <br>
-                </p>
+                </div>
             </div>
-            <div class="six wide right floated column">
-                <img class="ui large bordered rounded image" src="images\chatu.jpg">
+        </div>
+
+        <!--正文部分（2）-->
+        <div class="ui vertical stripe quote segment" style="padding-top: 10%; padding-bottom: 10%;">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+                    <div class="column">
+                        <h3>
+                            "If you can't make it good, at least make it looks good."<br>
+                            “如果你不能做到完美，至少做到看起来还可以。”
+                        </h3>
+                        <p>
+                            <img class="ui avatar image" src="images\Bill Gates.jpg"> <b>比尔·盖茨（Bill
+                                Gates）</b>微软（Microsoft）创始人
+                        </p>
+                    </div>
+                    <div class="column">
+                        <h3>
+                            "Best or nothing."<br>
+                            “要么最好，要么不做。”
+                        </h3>
+                        <p>梅赛德斯-奔驰（Mercedes-Benz）广告语</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--正文部分（3）-->
+        <div class="ui vertical stripe segment" style="padding-top: 10%; padding-bottom: 10%;">
+            <div class="ui text container">
+                <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+                <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing
+                    nothing by providing massive amounts of whitespace and generic content that can seem massive,
+                    monolithic
+                    and worth your attention.</p>
+                <a class="ui large button">Read More</a>
+                <h4 class="ui horizontal header divider">
+                    <a href="#">Case Studies</a>
+                </h4>
+                <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+                <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really
+                    true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
+                </p>
+                <a class="ui large button">I'm Still Quite Interested</a>
             </div>
         </div>
     </div>
 
-    <!--页脚与版权信息-->
-    <!--已经弃用的页脚
-    <div class="ui inverted vertical footer segment" style="padding-left: 20%; padding-right: 20%">
+    <!--正文部分（结束）-->
+
+
+    <!--页脚部分（开始）-->
+    <!--还可以借鉴GitHub的页脚：两边写字，中间有图标-->
+    <div class="ui inverted grey vertical four item footer segment">
         <div class="ui container">
             <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="three wide column">
-                    <h4 class="ui inverted header">关  于</h4>
+                    <h4 class="ui inverted header">关 于</h4>
                     <div class="ui inverted link list">
-                        <a class="item" href="#">Sitemap（站点导航）</a>
-                        <a class="item" href="#">Contact Us（联系我们）</a>
-                        <a class="item" href="#">Religious Ceremonies（宗教庆典？）</a>
-                        <a class="item" href="#">Gazebo Plans（。。计划）</a>
+                        <a class="item" href="#">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
+                        <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
+                        <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
                     </div>
                 </div>
                 <div class="three wide column">
-                    <h4 class="ui inverted header">Services（服  务）</h4>
+                    <h4 class="ui inverted header">联系作者</h4>
                     <div class="ui inverted link list">
-                        <a class="item" href="#">Banana Pre-Order（预定香蕉？）</a>
-                        <a class="item" href="#">DNA FAQ（DNA与问答？）</a>
-                        <a class="item" href="#">How To Access（如何获得授权）</a>
-                        <a class="item" href="#">Favorite X-Men（最受欢迎的人）</a>
+                        <a class="item">E-mail: smilewwc@qq.com</a>
+                        <a class="item">Telephone：000000（示例）</a>
+                        <a class="item">邮编：111111（示例）</a>
+                        <a class="item">地址：中国-China</a>
                     </div>
                 </div>
                 <div class="seven wide column">
-                    <h4 class="ui inverted header">Footer Header（页脚注释）</h4>
-                    <p>版权信息：Copyright ©2020 BitBitcode. All Rights Reserved.</p>
+                    <h4 class="ui inverted header">版权信息</h4>
+                    <p>
+                        Semantic UI样式版权归原网站所有，请勿商用！<br>
+                        Copyright ©2019~2020 BitBitcode.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-    -->
-
-    <!--请借鉴GitHub的页脚，两边写字，中间有图标-->
-    <div class="ui horizontal divider"> </div>
-    <footer class="myfooter">
-        <span style="vertical-align:middle"> Copyright ©2019~2020 BitBitcode.</span>
-        <img src="images\Logo.png" width="40px" height=40px" style="vertical-align:middle">
-        <span style="vertical-align:middle"> E-mail: smilewwc@qq.com </span>
-    </footer>
-
+    <!--页脚部分（结束）-->
 </body>
 
 </html>
