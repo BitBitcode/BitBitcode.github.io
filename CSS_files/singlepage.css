@@ -1,0 +1,154 @@
+/*自定义的主页样式*/
+
+
+/*规定 “类” 为 “background_img” 的样式，此处用来实现自动调整大小的背景图片*/
+.background {
+    /*让整个div固定在屏幕的最上方和最左边*/
+    position:fixed;
+    top: 0;
+    left: 0;
+
+    /*让div铺满整个屏幕*/
+    width:100%;
+    height:100%;
+
+    /*div的最小宽度为1000px，当屏幕宽度小于1000px时，图片不会缩放*/
+    min-width: 1000px;
+
+    /*让整个div在HTML页面中各个层级的下方，正常情况下，默认创建的层级z-index的值是0*/
+    z-index:-10;
+
+    /*zoom是CSS hack中专对IE6起作用的部分。
+      IE6浏览器会执行zoom:1表示对象的缩放比例。
+      兼容IE6、IE7、IE8浏览器，经常会遇到一些问题，可以使用zoom:1来解决。
+      zoom有如下作用：
+        1.触发IE浏览器的haslayout；
+        2.解决ie下的浮动，margin重叠等一些问题。*/
+    zoom: 1;
+
+    /*设置背景图片：平铺，不重复。并设置背景色，当加载缓慢或者加载不出图片时可以有个代替的底色*/
+    /*一定要注意 url 的斜杠是“÷”的斜杠：“/” 否则找不到路径！！！*/
+    background: url(../images/background-3-1920X1280-small.jpg) no-repeat;
+    background-color: rgba(208,229,247,1);
+
+    /*上面三句是一个意思：让图片随屏幕大小同步缩放，
+      但是有部分可能会被裁切，不过不至于会露白，
+      下面两句是为chrome和opera浏览器作兼容*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+
+    /*图片的位置，居中，靠左对齐*/
+    background-position: center 0;
+
+    /*高斯模糊滤镜（会模糊整个div内的所有内容），模糊半径：15px*/
+    filter: blur(15px);
+}
+
+
+/*规定 id 为 “start” 的样式，此处用来实现半透明背景，以及流出内边框*/
+#start {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(240,248,255,0.1);
+
+    padding-top: 25%;
+    padding-bottom: 0%;
+}
+
+
+/*【Microsoft Fluent Design】浅色 - 不透明度：40% - 导航栏，*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Light_Navigation{
+    text-align: center;        /*由于还没有内容，先设置大一些占个位置*/
+    vertical-align: middle;
+    height: 50%;            /*由于还没有内容，先设置大一些占个位置*/
+
+    color:rgb(0,0,0);
+    background-color: rgba(240,248,255,0.5);
+
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+
+    border-style: solid;
+    border-width: 2px 2px 0px 2px;
+    border-color: rgba(230,230,230,0.6);
+
+}
+
+
+/*【Microsoft Fluent Design】浅色 - 不透明度：80% - 内容*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Light_Content{
+    text-align: center;        /*由于还没有内容，先设置大一些占个位置*/
+    height: 2000px;            /*由于还没有内容，先设置大一些占个位置*/
+
+    color:rgb(0,0,0);
+    background-color: rgba(240,248,255,0.8);
+
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(200,200,200,0.9);
+
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+/*【Microsoft Fluent Design】深色 - 不透明度：60% - 导航栏*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Dark_Navigation{
+    color:rgb(255, 250, 255);
+    background-color: rgba(0,7,15,0.6);
+
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+
+    border-style: solid;
+    border-width: 2px 2px 0px 2px;
+    border-color: rgba(230,230,230,0.6);
+
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+/*【Microsoft Fluent Design】深色 - 不透明度：80% - 内容*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Dark_Content{
+    color:rgb(255, 250, 255);
+    background-color: rgba(0,7,15,0.8);
+
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(160,160,160,1);
+
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/*  */
+
+
+/*页  脚*/
+.myfooter {
+    height: 80px;
+    background-color: rgba(230,230,230,0.8);
+    text-align: center;
+    line-height: 80px;
+}
