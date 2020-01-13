@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!--文件类型-->
-<html lang=en>
 
 <head>
     <!-- Standard Meta -->
@@ -27,8 +26,8 @@
             .ready(function () {
                 $('.ui.menu .ui.dropdown')
                     .dropdown({
-                    on: 'hover'
-                });
+                        on: 'hover'
+                    });
                 $('.ui.menu a.item')
                     .on('click', function () {
                         $(this)
@@ -40,7 +39,7 @@
                     ;
             })
             ;
-        
+
     </script>
 
     <!--过渡效果（技术问题，没有看到效果）-->
@@ -56,7 +55,6 @@
 
     <!--内部样式定义-->
     <style>
-        
         body {
             padding: 0em;
         }
@@ -79,28 +77,28 @@
         body>.ui.container {
             margin-top: 3em;
         }
-    
+
         iframe {
             border: none;
             width: calc(100% + 2em);
             margin: 0em -1em;
             height: 300px;
         }
-    
+
         iframe html {
             overflow: hidden;
         }
-    
+
         iframe body {
             padding: 0em;
         }
-    
+
         .ui.container>h1 {
             font-size: 3em;
             text-align: center;
             font-weight: normal;
         }
-    
+
         .ui.container>h2.dividing.header {
             font-size: 2em;
             font-weight: normal;
@@ -129,7 +127,7 @@
         <a class="item" href="(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
 
         <!--下拉菜单-->
-        <div tabindex="0" class="ui dropdown item" >
+        <div tabindex="0" class="ui dropdown item">
             其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
@@ -198,14 +196,15 @@
             position: absolute; 
             width: 100%; 
             bottom:10px">
-            <i class="huge angle double down icon"> </i>
+            
+            <a style="color:rgba(255,255,255,0.4)" href="#anchor"> <i class="huge angle double down icon"> </i> </a>
         </div>
     </div>
     <!--开头部分（结束）-->
 
 
     <!--正文部分（开始）-->
-    <div class="MFD_Light_Navigation">
+    <div class="MFD_Light_Navigation" id="anchor">
         <h1> 在这里，你可以做什么 </h1>
     </div>
     <div class="MFD_Light_Content">
@@ -217,14 +216,14 @@
                         <img class="ui large bordered rounded image" src="images\chatu.jpg">
                     </div>
                     <div class="eight wide column">
-                        <h3 class="ui header">这里有一些我的总结</h3>
+                        <h2 class="ui header">这里有一些我的总结</h2>
                         <p>
                             对于从未接触过编程的人来说，看到密密麻麻的代码是一点兴趣都没有的<br>
                             而即使耐下心来努力学习，也还是会四处碰壁<br>
                             其实你遇到的很多问题，大家都遇到过并且解决了<br>
                             所以，去找一些分享经验的帖子就很有帮助<br>
                         </p>
-                        <h3 class="ui header">也有一些与编程无关的分享</h3>
+                        <h2 class="ui header">也有一些与编程无关的分享</h2>
                         <p>
                             Yes, that's right.<br>
                             生活不止眼前的苟且，还有诗和远方！<br>
@@ -237,14 +236,65 @@
             </div>
         </div>
 
+
         <!--正文部分（2）-->
+        <div class="ui vertical stripe segment" style="padding-top: 10%; padding-bottom: 10%;">
+            <div class="ui text container">
+                <!-- 1. -->
+                <h2 class="ui header"> 庞大团队打造的丰富内容 </h2>
+                <p>这里汇集了无数极富特色的经验分享与知识总结，那些书上没有的知识，或许值得你的注意。<br>
+                    （其实团队只有一个人，内容也尚未添加。）
+                </p>
+                <h4 class="ui header">进一步了解：</h4>
+                <a class="ui large red button" href="(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+                <a class="ui large black button" href="(0)Menu_Pages\(2)CMD.html"> CMD </a>
+                <a class="ui large teal button" href="(0)Menu_Pages\(3)Python.html"> Python </a>
+                <br>
+
+                <!-- 2. -->
+                <h4 class="ui horizontal header divider">
+                    <a> 我是分割线 </a>
+                </h4>
+                <h2 class="ui header"> 精心筛选的娱乐内容 </h2>
+                <p>或许你对编程不感兴趣，为什么不来看看娱乐内容。美文、歌词、壁纸，总有能打动你的瞬间。<br>
+                    为何不点击下方的按钮开始尝试体验？
+                </p>
+                <a class="ui large blue button" href="(0)Menu_Pages\(4)Articles.html">我十分感兴趣</a>
+                <br>
+
+                <!-- 3. -->
+                <h4 class="ui horizontal header divider">
+                    <a> 我是分割线 </a>
+                </h4>
+                <h2 class="ui header"> 突破性的界面设计 </h2>
+                <p>是的，我们用全新的思路来设计网页，以便给你带来更好的阅读体验。
+                    清爽的配色、舒适的排版、精美的插图。。。借助“Semantic UI™”的强大组件，打造出色的博客网页。<br>
+                    Semantic作为一款开发框架，帮助开发者使用对人类友好的HTML语言构建优雅的响应式布局。
+                </p>
+                <a class="ui large blue button" href="https://semantic-ui.com/"> 尝试探索Semantic UI </a>
+                <br>
+
+                <!-- 4. -->
+                <h4 class="ui horizontal header divider">
+                    <a> 我是分割线 </a>
+                </h4>
+                <h2 class="ui header"> 对开发者的支持 </h2>
+                <p>没错，我们的网页已经在GitHub上开源。<br>
+                    如果你也对网页开发有兴趣，你可以随时查看HTML代码，下载项目。
+                    同时，我们的开发面向所有感兴趣的人，欢迎提交你的更改。<br>
+                    不知道Github是什么？GitHub是一个面向开源及私有软件项目的托管平台。
+                </p>
+                <a class="ui large blue button" href="https://github.com/"> 前往了解GitHub </a>
+            </div>
+        </div>
+
+        <!--正文部分（3）-->
         <div class="ui vertical stripe quote segment" style="padding-top: 10%; padding-bottom: 10%;">
             <div class="ui equal width stackable internally celled grid">
                 <div class="center aligned row">
                     <div class="column">
                         <h3>
                             "If you can't make it good, at least make it looks good."<br>
-                            “如果你不能做到完美，至少做到看起来还可以。”
                         </h3>
                         <p>
                             <img class="ui avatar image" src="images\Bill Gates.jpg"> <b>比尔·盖茨（Bill
@@ -254,36 +304,25 @@
                     <div class="column">
                         <h3>
                             "Best or nothing."<br>
-                            “要么最好，要么不做。”
                         </h3>
                         <p>梅赛德斯-奔驰（Mercedes-Benz）广告语</p>
                     </div>
-
                 </div>
             </div>
         </div>
 
-        <!--正文部分（3）-->
-        <div class="ui vertical stripe segment" style="padding-top: 10%; padding-bottom: 10%;">
-            <div class="ui text container">
-                <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-                <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing
-                    nothing by providing massive amounts of whitespace and generic content that can seem massive,
-                    monolithic
-                    and worth your attention.</p>
-                <a class="ui large button">Read More</a>
-                <h4 class="ui horizontal header divider">
-                    <a href="#">Case Studies</a>
-                </h4>
-                <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-                <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really
-                    true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
-                </p>
-                <a class="ui large button">I'm Still Quite Interested</a>
-            </div>
+
+        <!--消息栏-->
+        <div class="ui info message">
+            <div class="header"> 可能需要注意：网站仍在开发中。。。 </div>
+            <ul class="list">
+                <li> 首页已完成，你可以看到网站的基本框架 </li>
+                <li> 一些高级功能仍在技术攻关，如搜索功能、过渡效果、交互内容等 </li>
+                <li> 网页介绍仅供参考，目前内容非常有限，具体以实物为准 </li>
+                <li> （“哦，我的上帝，如果你仍旧用这么蹩脚的翻译体和我说话，我保证会打烂你的头！”）</li>
+            </ul>
         </div>
     </div>
-
     <!--正文部分（结束）-->
 
 

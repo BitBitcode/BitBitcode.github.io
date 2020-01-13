@@ -58,6 +58,14 @@
 }
 
 
+/*规定所有段落的样式*/
+p {
+    font-size: 16;
+    text-indent: 0em;
+    background: transparent;        /*此项设置相当于文字底纹（当前是透明）*/
+    line-height: 150%;
+}
+
 /*【Microsoft Fluent Design】浅色 - 不透明度：40% - 导航栏，*/
 /*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
 .MFD_Light_Navigation{
