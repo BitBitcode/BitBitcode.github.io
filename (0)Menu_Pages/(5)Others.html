@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!--文件类型-->
 
+<html>
+
 <head>
     <!-- Standard Meta -->
     <meta charset="UTF-8">
@@ -49,12 +51,7 @@
         }
 
         .ui.menu {
-            margin: 3em 0em;
-            border-style: solid;
-            border-width: 2px;
-            /*设置菜单栏两边的距离，类似居中的效果*/
-            padding-right: 10%;
-            padding-left: 10%;
+            margin: 0em 0em;
         }
 
         .ui.menu:last-child {
@@ -69,11 +66,11 @@
 
 
     <!--页眉与导航栏（开始）-->
-    <div class="ui inverted grey fixed menu">
+    <div class="ui inverted grey fixed menu" style="padding-right: 10%; padding-left: 10%;">
         <!--单项菜单-->
         <div class="header item">BitBitcode</div>
         <a class="item" href="..\index.html"> 首 页 </a>
-        <a class="active item" href="(1)C_and_C++.html"> C/C++ </a>
+        <a class="item" href="(1)C_and_C++.html"> C/C++ </a>
         <a class="item" href="(2)CMD.html"> CMD </a>
         <a class="item" href="(3)Python.html"> Python </a>
         <a class="item" href="(4)Articles.html"> 文 章 </a>
@@ -83,11 +80,11 @@
             其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <a class="item"> 有趣的话 </a>
-                <a class="item"> 歌词分享 </a>
-                <a class="item"> 壁纸分享 </a>
+                <a class="item" href="..\(5)Others\sentence.html"> 有趣的话 </a>
+                <a class="item" href="..\(5)Others\lyric.html"> 歌词分享 </a>
+                <a class="item" href="..\(5)Others\wallpaper.html"> 壁纸分享 </a>
                 <div class="divider"></div>
-                <a class="item" href="(5)Others.html">其 他</a>
+                <a class="active item" href="(5)Others.html">其 他</a>
                 <div class="divider"></div>
                 <a class="item" href="..\README.md">关于本站</a>
             </div>
@@ -97,7 +94,7 @@
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent inverted icon input">
-                    <input type="text" placeholder="点我搜索哦">
+                    <input type="text" placeholder="搜索功能还未上线">
                     <button class="ui grey icon button"><i class="search icon"></i></button>
                 </div>
             </div>
@@ -106,26 +103,134 @@
     </div>
     <!--页眉与导航栏（结束）-->
 
-    <!--正文部分（开始）-->
-    <div id="mainbody">
-    <div class="MFD_Light_Navigation">
-        <img src="..\images\为世界上所有的美好而战.png" height="100%">
-    </div>
 
-    <div class="MFD_Light_Content">
-        <div class="ui piled segment">
-            <h3 class="ui header">人的三次成长</h3>
-            只有事情有对错，人没有。所谓人的对错，只是他在做了事后要承担的责任。<br />
-            对与错不能解答这个世界上的所有问题。<br />
-            一个人的一生会经历三次成长：<br />
-            第一次，是明白事情的对与错；<br />
-            第二次，是明白有些事不只有对与错；<br />
-            第三次，是在明白有些事没有对与错之后，依然坚定地去做自己相信的事，并为之负起责任。<br />
+    <!--正文部分（开始）-->
+    <div class="MFD_Light_Navigation">
+        <!--侧边二级导航栏-->
+        <div id="sidebar">
+            <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0; font-size: 16px">
+                <a class="active item" href="#md1"> 前 言 </a>
+                <a class="item" href="#md2"> 开发历程 </a>
+                <a class="item" href="#md3"> Q & A </a>
+                <a class="item" href="#md4"> 其 他 </a>
+                <a class="item"> 待 续 </a>
+            </div>
         </div>
-        <h1><i class="big yellow exclamation triangle icon"> </i>我是凑数的</h1>
-    </div>
+
+        <!--右边内容页-->
+        <div class="MFD_Light_Content">
+            <div class="part" id="md1">
+                <h1 class="ui dividing header"> 前 言 </h1>
+                <div class="ui raised segment">
+                    <h2><i class="home blue thumbtack icon"> </i>本页是凑数的</h2>
+                </div>
+                <p>
+                    最开始的时候想把“文章”、“歌词”、“壁纸”等等几个娱乐栏目放在一个下拉菜单中（也就是现在的“其他”），
+                    但是下拉菜单一直下拉不了，就更改了布局，将这些娱乐栏目放在这个页面。结果后来查了查怎么搞解决了：
+                    因为下拉菜单属于“交互”性质的控件，所以不光要复制模板过来，也要在HTML中加入一段脚本代码。
+                    其实我也不懂这段代码（Javascript写的），就只是按照说明上的代码复制过来了。
+                    于是恢复了最开始打算的布局，这个页面也就没有用了，但是做都做了，不如把它留下来，写点开发历程、打打草稿之类的。
+                </p>
+            </div>
+
+            <div class="part" id="md2">
+                <h1 class="ui dividing header"> 开发历程 </h1>
+                <h4>2020.1.14 更 新</h4>
+                菜单页制作完成<br>
+                更新了部分内容<br>
+                优化了首页体验<br>
+
+                <h4>2020.1.10 更 新</h4>
+                重制首页<br>
+                引入 Microsoft Fluent Design 设计思想<br>
+                
+                <h4>2020.1.8 发 布</h4>
+                个人网页正式部署<br>
+                基于 Semantic UI 初步构建了主页<br>
+            </div>
+
+            <div class="part" id="md3">
+                <h1 class="ui dividing header"> Q & A </h1>
+
+                <div class="ui top attached info message"><i class="question circle outline icon"></i>
+                    Q：这个网页是什么/做什么的？
+                </div>
+                <div class="ui attached segment">
+                    <p>A：其实最开始并没有想着做网页，只是查资料的时候看到网上有人做了自己的博客/网页，
+                        页面十分漂亮，还有一些动态效果，然后就想做一个试一下。
+                        后来做着做着就想到可以将自己学习编程过程中的问题像那些博主一样写在自己的网站中，
+                        也可以分享一些文章、图片等等。所以不要纠结内容啦，能做到什么程度、能做多久其实心里也不知道。
+                    </p>
+                </div>
+                
+                <br>
+
+                <div class="ui top attached info message"><i class="question circle outline icon"></i>
+                    Q：网页都是你自己做的吗？
+                </div>
+                <div class="ui attached segment">
+                    <p>A：严格说不是，网页的制作用到了很多现成的UI控件，来源于“Semantic UI”网站。
+                        比如菜单栏和页脚，都是利用现成的，还有图标、现在看到的问答框框，也是利用模板。
+                        但是整体的样式，中间具体怎么布置，是我自己的想法。
+                        而页边距、行间距多大，文字排版，添加超链接等等问题，
+                        都需要一项一项地去设置，这个是模板帮不了的。
+                        另外半透明的效果是微软“Fluent Design”给我的灵感，
+                        如果是Windows 10的小伙伴可以打开“设置”应用看看就明白了。
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="ui top attached info message"><i class="question circle outline icon"></i>
+                    Q：Semantic UI 是什么？
+                </div>
+                <div class="ui attached segment">
+                    <p>A：Semantic UI是一个免费开源的网页UI提供网站。
+                        其中有很丰富的浏览器常用元素，比如菜单、按钮、页脚、输入框、复选框等等。
+                        目前很多网站都是采用这样的方式构建，也就是常说的“避免重复造轮子”。
+                        这样的网页UI还有很多，大家有兴趣可以自己尝试一下。<br>
+                        （Semantic UI 网站在首页以及每页的页脚均有链接）
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="ui top attached info message"><i class="question circle outline icon"></i>
+                    Q：GitHub 是什么？
+                </div>
+                <div class="ui attached segment">
+                    <p>A：GitHub 既是一个论坛式的网站，聚集了世界各地的程序员，包括微软、谷歌的官方号。
+                        同时也是一个代码的云盘，即全球最大的开源社区，同时提供免费的代码版本管理。
+                        大家有兴趣可以去上面淘淘金，也可以用作自己的文件版本管理云盘。<br>
+                        （GitHub 网站在首页以及每页的页脚均有链接）
+                    </p>
+                </div>
+                
+                <br>
+
+                <div class="ui top attached info message"><i class="question circle outline icon"></i>
+                    Q：为什么没有搜索功能/留言功能等？
+                </div>
+                <div class="ui attached segment">
+                    <p>A：与输入输出有关的功能，后台管理等需要用到脚本语言，
+                        还有很多过渡效果、交互操作，包括下拉菜单也需要用到脚本语言，
+                        站主比较菜，目前只会静态网页，
+                        所以还没有这些功能和效果，以后考虑加入一些高级功能以及动态效果。
+                    </p>
+                </div>
+            </div>
+
+            <div class="part" id="md4">
+                <h1 class="ui dividing header"> 其 他 </h1>
+                <!--卡片式-->
+                <div class="ui raised pink segment">
+                    <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
+                </div>
+            </div>
+        </div>
     </div>
     <!--正文部分（结束）-->
+
 
     <!--页脚部分（开始）-->
     <!--还可以借鉴GitHub的页脚：两边写字，中间有图标-->
@@ -135,7 +240,7 @@
                 <div class="three wide column">
                     <h4 class="ui inverted header">关 于</h4>
                     <div class="ui inverted link list">
-                        <a class="item" href="#">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://github.com/">服务器支持：GitHub Pages</a>
                         <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
                         <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
                         <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
@@ -152,10 +257,8 @@
                 </div>
                 <div class="seven wide column">
                     <h4 class="ui inverted header">版权信息</h4>
-                    <p>
-                        Semantic UI样式版权归原网站所有，请勿商用！<br>
-                        Copyright ©2019~2020 BitBitcode.
-                    </p>
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
                 </div>
             </div>
         </div>
