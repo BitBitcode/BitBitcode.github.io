@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!--文件类型-->
 
+<html>
+
 <head>
     <!-- Standard Meta -->
     <meta charset="UTF-8">
@@ -58,7 +60,7 @@
     </style>
 </head>
 
-<div>
+<body>
     <!--全页面背景-->
     <div class="background"> </div>
 
@@ -78,9 +80,9 @@
             其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <a class="item"> 有趣的话 </a>
-                <a class="item"> 歌词分享 </a>
-                <a class="item"> 壁纸分享 </a>
+                <a class="item" href="..\(5)Others\sentence.html"> 有趣的话 </a>
+                <a class="item" href="..\(5)Others\lyric.html"> 歌词分享 </a>
+                <a class="item" href="..\(5)Others\wallpaper.html"> 壁纸分享 </a>
                 <div class="divider"></div>
                 <a class="item" href="(5)Others.html">其 他</a>
                 <div class="divider"></div>
@@ -92,7 +94,7 @@
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent inverted icon input">
-                    <input type="text" placeholder="点我搜索哦">
+                    <input type="text" placeholder="搜索功能还未上线">
                     <button class="ui grey icon button"><i class="search icon"></i></button>
                 </div>
             </div>
@@ -103,8 +105,9 @@
 
 
     <!--正文部分（开始）-->
-    <div id="mainbody">
-        <div class="MFD_Light_Navigation">
+    <div class="MFD_Light_Navigation">
+        <!--侧边二级导航栏-->
+        <div id="sidebar">
             <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0; font-size: 16px">
                 <a class="active item" href="#md1"> 前 言 </a>
                 <a class="item" href="#md2"> 上 新 </a>
@@ -114,11 +117,10 @@
             </div>
         </div>
 
+        <!--右边内容页-->
         <div class="MFD_Light_Content">
             <div class="part" id="md1">
-                
-                <h1 class="ui dividing header"> 前  言 </h1>
-
+                <h1 class="ui dividing header"> 前 言 </h1>
                 <h2> C语言 </h2>
                 <p>
                     C语言是一门面向过程的、抽象化的通用程序设计语言，广泛应用于底层开发。
@@ -127,7 +129,7 @@
                     尽管C语言提供了许多低级处理的功能，但仍然保持着跨平台的特性，
                     以一个标准规格写出的C语言程序可在包括类似嵌入式处理器以及超级计算机等作业平台的许多计算机平台上进行编译。
                 </p>
-                
+
                 <h2> C++ </h2>
                 <p>
                     C++是C语言的继承，它既可以进行C语言的过程化程序设计，
@@ -137,22 +139,21 @@
                     不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力
                 </p>
 
-
                 <h2> 安 装 </h2>
                 <p>
                     如果你只需要一个轻量化的代码编辑器（也称文本编辑器），推荐：Visual Studio Code<br>
                     不是那个大出天际的Visual Studio，是微软推出的轻量化新编辑器，由于是轻量化的，所以需要手动配置：
                     下载编译器，下载对应语言的“扩展”，然后配置环境（仔细阅读帮助文档即可，软件内也有相应的提示信息）<br>
                     <div class="ui message"><i class="download icon"></i> 下 载：
-                        <a href="https://code.visualstudio.com/"> Visual Studio Code </a>
+                        <a href="https://code.visualstudio.com/"> Visual Studio Code </a>（完全免费）
                     </div>
                 </p>
-                <br>
+
                 <p>
                     如果你想要完整的编程体验，那么你需要一款 IDE（Integrated Development Environment，集成开发环境），
                     包括代码编辑器、编译器、调试器和图形用户界面等工具。
                     集成了代码编写功能、分析功能、编译功能、调试功能等一体化的开发软件服务套。<br>
-                    推荐：Visual Studio（大出天际的那个，不过现在有所改善），是微软成熟的开发软件，最新版本是2019。<br>
+                    推荐：Visual Studio（大出天际的那个，不过现在有所改善），是微软成熟的开发软件，安装时选择需要的“工作负载”，无需手动配置。最新版本是2019。<br>
                     <div class="ui message"> <i class="download icon"></i> 下 载：
                         <a href="https://visualstudio.microsoft.com"> Visual Studio 2019</a>（下载免费的Community版本即可）
                     </div>
@@ -162,20 +163,16 @@
                 </div>
             </div>
 
-
             <div class="part" id="md2">
-                <h1 class="ui dividing header"> 上  新 </h1>
-                <div class="ui horizontal divider"></div>
+                <h1 class="ui dividing header"> 上 新 </h1>
                 <!--卡片式-->
                 <div class="ui raised pink segment">
                     <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
                 </div>
-                
             </div>
 
             <div class="part" id="md3">
                 <h1 class="ui dividing header"> 推 荐 </h1>
-                <div class="ui horizontal divider"></div>
                 <!--卡片式-->
                 <div class="ui raised pink segment">
                     <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
@@ -219,13 +216,13 @@
                 </div>
                 <div class="seven wide column">
                     <h4 class="ui inverted header">版权信息</h4>
-                        Semantic UI样式版权归原网站所有，请勿商用！<br>
-                        Copyright ©2019~2020 BitBitcode.
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
                 </div>
             </div>
         </div>
     </div>
     <!--页脚部分（结束）-->
-    </body>
+</body>
 
-    </html>
+</html>

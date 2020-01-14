@@ -1,4 +1,4 @@
-/*自定义的菜单页样式*/
+/*自定义的主页样式*/
 
 
 /*规定 “类” 为 “background_img” 的样式，此处用来实现自动调整大小的背景图片*/
@@ -46,40 +46,101 @@
 }
 
 
-/*页边二级导航栏*/
-#sidebar{
-    /*容器位置、大小、颜色*/
-    position: fixed;        /*位置固定在左上角，以便于阅读右边内容时随时可以导航*/
-    float: left;        /*浮动在左边*/
+/*规定 id 为 “start” 的样式，此处用来实现半透明背景，以及流出内边框*/
+#start {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(240,248,255,0.1);
+
+    padding-top: 25%;
+    padding-bottom: 0%;
+}
+
+
+/*框框*/
+#mainbody{
     top: 0;
     left: 0;
-    width: 20%;
-    padding-top: 15%;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    text-align: left;
+    margin-top: 3rem;
+    width: 100%;
+    color: magenta;
+    height: inherit;          /*由于还没有内容，先设置大一些占个位置*/
+}
+
+
+/*规定所有段落的样式*/
+.part{
+    /*容器位置、大小、颜色*/
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    font-size: 16px;
+
+
+    border-style: unset;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(200,200,200,1);
+}
+
+p { 
+  text-indent: 2em;
+  background: transparent;        /*此项设置相当于文字底纹（当前是透明）*/
+  line-height: 200%;
 }
 
 
 /*【Microsoft Fluent Design】浅色 - 不透明度：40% - 导航栏，*/
+
 .MFD_Light_Navigation{
     /*容器位置、大小、颜色*/
     top: 0;
-    left: 0;
-    width: 100%;        /*宽度为整个页面，实质上成为了最大的容器*/
-    height: auto;        /*长度会根据内容自动调整*/
+    float: right;        /*浮动在左边*/
+    width: 20%;
+    height: inherit;          /*由于还没有内容，先设置大一些占个位置*/
     background-color: rgba(240,248,255,0.5);
 
     /*内边距、边框、外边距（上右下左）*/
-    padding-top: 3rem;
+    padding-top: 10%;
     padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+    padding-bottom: 10%;
+    padding-left: 2rem;
 
     border-style: solid;        /*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
-    border-width: 2px 2px 2px 2px;
+    border-width: 2px 0px 2px 2px;
     border-color: rgba(230,230,230,0.6);
+
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    /*字体大小、对齐方式、颜色*/
+    font-size: 16px;
+    text-align: right;
+    color:rgb(0,0,0);
+}
+
+
+/*【Microsoft Fluent Design】浅色 - 不透明度：80% - 内容*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Light_Content{
+    /*容器位置、大小、颜色*/
+    top: 0;
+    float: left;        /*浮动在右边*/
+    width: 80%;
+            /*由于还没有内容，先设置大一些占个位置*/
+    background-color: rgba(240,248,255,0.8);
+
+    /*内边距、边框、外边距（上右下左）*/
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+
+    border-style: solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgba(200,200,200,0.9);
 
     margin-top: 0;
     margin-right: 0;
@@ -93,63 +154,49 @@
 }
 
 
-/*【Microsoft Fluent Design】浅色 - 不透明度：80% - 内容*/
-.MFD_Light_Content{
-    /*容器位置、大小、颜色*/
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: auto;        /*长度会根据内容自动调整*/
-    background-color: rgba(240,248,255,0.6);
-    /*（尚不清楚计算方法有无问题）
-    由于是内容页叠加在导航页，导航页透光率为0.5，透过导航页的光为50%。
-    内容页的透光率为0.4，透过内容页的光为50%×40%=20%，即不透明度为0.2*/
+/*【Microsoft Fluent Design】深色 - 不透明度：60% - 导航栏*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Dark_Navigation{
+    color:rgb(255, 250, 255);
+    background-color: rgba(0,7,15,0.6);
 
-    /*内边距、边框、外边距（上右下左）*/
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    border-style: solid;
+    border-width: 2px 2px 0px 2px;
+    border-color: rgba(230,230,230,0.6);
+
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+/*【Microsoft Fluent Design】深色 - 不透明度：80% - 内容*/
+/*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
+.MFD_Dark_Content{
+    color:rgb(255, 250, 255);
+    background-color: rgba(0,7,15,0.8);
+
     padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 10%;
-
-    border-style: solid;        /*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/
-    border-width: 0px 0px 0px 0px;
-    border-color: rgba(200,200,200,0.9);
-
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 20%;        /*给左边的导航栏留出位置*/
-
-    /*字体大小、对齐方式、颜色*/
-    font-size: 16px;
-    text-align: left;
-    color:rgb(0,0,0);
-}
-
-
-/*内容页各部分*/
-.part{
-    /*容器位置、大小、颜色*/
-
-    /*内边距、边框、外边距（上右下左）*/
-    padding-top: 5%;
     padding-bottom: 5%;
-    
-    border-style: unset;        /*当前边框已禁用。在需要的时候设置边框以便检查区域大小*/
-    border-width: 2px 2px 2px 2px;
-    border-color: rgba(200,200,200,1);
 
-    /*字体大小、对齐方式、颜色*/
-    font-size: 16px;
-    line-height: 200%;
-    text-align: left;
-    color:rgb(0,0,0);
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(160,160,160,1);
+
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 
-/*规定所有段落的样式*/
-p { 
-  text-indent: 2em;
-  background: transparent;        /*此项设置相当于文字底纹（当前是透明）*/
-  line-height: 200%;
+/*  */
+
+
+/*页  脚*/
+.myfooter{
+    height: 15%;
+    background-color: rgba(200,200,200,1);
 }

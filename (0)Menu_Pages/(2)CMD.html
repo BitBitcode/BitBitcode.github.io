@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!--文件类型-->
 
+<html>
+
 <head>
     <!-- Standard Meta -->
     <meta charset="UTF-8">
@@ -49,12 +51,7 @@
         }
 
         .ui.menu {
-            margin: 3em 0em;
-            border-style: solid;
-            border-width: 2px;
-            /*设置菜单栏两边的距离，类似居中的效果*/
-            padding-right: 10%;
-            padding-left: 10%;
+            margin: 0em 0em;
         }
 
         .ui.menu:last-child {
@@ -83,9 +80,9 @@
             其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <a class="item"> 有趣的话 </a>
-                <a class="item"> 歌词分享 </a>
-                <a class="item"> 壁纸分享 </a>
+                <a class="item" href="..\(5)Others\sentence.html"> 有趣的话 </a>
+                <a class="item" href="..\(5)Otherss\lyric.html"> 歌词分享 </a>
+                <a class="item" href="..\(5)Others\wallpaper.html"> 壁纸分享 </a>
                 <div class="divider"></div>
                 <a class="item" href="(5)Others.html">其 他</a>
                 <div class="divider"></div>
@@ -97,7 +94,7 @@
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent inverted icon input">
-                    <input type="text" placeholder="点我搜索哦">
+                    <input type="text" placeholder="搜索功能还未上线">
                     <button class="ui grey icon button"><i class="search icon"></i></button>
                 </div>
             </div>
@@ -106,10 +103,12 @@
     </div>
     <!--页眉与导航栏（结束）-->
 
+
     <!--正文部分（开始）-->
-    <div id="mainbody">
-        <div class="MFD_Light_Navigation">
-            <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0">
+    <div class="MFD_Light_Navigation">
+        <!--侧边二级导航栏-->
+        <div id="sidebar">
+            <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0; font-size: 16px">
                 <a class="active item" href="#md1"> 前 言 </a>
                 <a class="item" href="#md2"> 上 新 </a>
                 <a class="item" href="#md3"> 推 荐 </a>
@@ -117,75 +116,63 @@
                 <a class="item"> 待 续 </a>
             </div>
         </div>
-    
+
         <div class="MFD_Light_Content">
             <div class="part" id="md1">
-    
                 <h1 class="ui dividing header"> 前 言 </h1>
-    
-                <h2> C语言 </h2>
+                <h2> CMD（Command Prompt，命令提示符） </h2>
                 <p>
-                    C语言是一门面向过程的、抽象化的通用程序设计语言，广泛应用于底层开发。
-                    C语言能以简易的方式编译、处理低级存储器。
-                    C语言是仅产生少量的机器语言以及不需要任何运行环境支持便能运行的高效率程序设计语言。
-                    尽管C语言提供了许多低级处理的功能，但仍然保持着跨平台的特性，
-                    以一个标准规格写出的C语言程序可在包括类似嵌入式处理器以及超级计算机等作业平台的许多计算机平台上进行编译。
+                    命令提示符是在操作系统中，提示进行命令输入的一种工作提示符。
+                    在不同的操作系统环境下，命令提示符各不相同，这里只介绍Windows系统的。
+                    在windows环境下，命令行程序为cmd.exe，是一个32位的程序，用来解释执行命令，
+                    语法风格非常像早期的DOS系统命令，可以看作一种简化的脚本语言。<br>
+                    命令提示符可以输入输出信息，有if语句for语句，很多逻辑和编程语言是很像的，可以对文件和文件夹进行操作，如创建、删除、重命名，
+                    还有很多网络命令，系统管理命令等，如查看和修改系统时间、磁盘模式，查询操作系统版本。
                 </p>
-    
-                <h2> C++ </h2>
+                <div class="ui warning message"><i class="exclamation circle icon"></i>
+                    需要注意的是，CMD只是语法风格像DOS，但CMD不是操作系统！
+                </div>
+
+                <h2> Batch（批处理文件） </h2>
                 <p>
-                    C++是C语言的继承，它既可以进行C语言的过程化程序设计，
-                    又可以进行以抽象数据类型为特点的基于对象的程序设计，
-                    还可以进行以继承和多态为特点的面向对象的程序设计。
-                    C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，
-                    不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力
+                    在CMD.exe中运行的命令只能输入一条，按下回车执行一条，如果命令比较多就很麻烦，
+                    这就需要用到“批处理文件”，批处理文件会执行多条命令行。
+                    用记事本软件写出一系列的命令行，保存后改为“.cmd”或“.bat”后缀的文件，双击运行即可。
+                    （当然也可以用编程软件写，实际上编程软件的代码编辑部分就是一个记事本软件，
+                    只不过编程软件还可以用不同颜色显示代码、提示错误，以及编译代码、测试执行代码）
+                    由于命令提示符有很多文件操作相关的命令，所以我们可以利用批处理文件写出一些帮助我们完成繁琐操作的代码，比如重命名多个文件。
                 </p>
-    
-    
+                <div class="ui info message"><i class="exclamation circle icon"></i>
+                    批处理文件中的每一行命令相当于我们在CMD.exe中输入的一行命令，只不过它会自己执行完文件内的所有代码，故称批处理文件
+                </div>
+
                 <h2> 安 装 </h2>
                 <p>
-                    如果你只需要一个轻量化的代码编辑器（也称文本编辑器），推荐：Visual Studio Code<br>
-                    不是那个大出天际的Visual Studio，是微软推出的轻量化新编辑器，由于是轻量化的，所以需要手动配置：
-                    下载编译器，下载对应语言的“扩展”，然后配置环境（仔细阅读帮助文档即可，软件内也有相应的提示信息）<br>
-                    <div class="ui message"><i class="download icon"></i> 下 载：
-                        <a href="https://code.visualstudio.com/"> Visual Studio Code </a>
-                    </div>
-                </p>
-                <br>
-                <p>
-                    如果你想要完整的编程体验，那么你需要一款 IDE（Integrated Development Environment，集成开发环境），
-                    包括代码编辑器、编译器、调试器和图形用户界面等工具。
-                    集成了代码编写功能、分析功能、编译功能、调试功能等一体化的开发软件服务套。<br>
-                    推荐：Visual Studio（大出天际的那个，不过现在有所改善），是微软成熟的开发软件，最新版本是2019。<br>
-                    <div class="ui message"> <i class="download icon"></i> 下 载：
-                        <a href="https://visualstudio.microsoft.com"> Visual Studio 2019</a>（下载免费的Community版本即可）
-                    </div>
+                    无需安装，CMD是内置于Windows中的，有两种打开方式：<br>
+                    （1）按下“Windows 徽标键”+“R”，左下角弹出“运行”程序，输入“cmd”回车即可；<br>
+                    （2）直接在开始菜单中查找：Windows系统文件夹内。<br>
                 </p>
                 <div class="ui info message"><i class="info circle icon"></i>
-                    当然还有很多编辑器，大家可以根据自己的情况和喜好自行选择。
+                    在CMD.exe程序的标题栏上右键，打开属性，可以个性化配色，而不是每次都看到一个黑黑的窗口
                 </div>
             </div>
-    
-    
+
             <div class="part" id="md2">
                 <h1 class="ui dividing header"> 上 新 </h1>
-                <div class="ui horizontal divider"></div>
                 <!--卡片式-->
                 <div class="ui raised pink segment">
                     <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
                 </div>
-    
             </div>
-    
+
             <div class="part" id="md3">
                 <h1 class="ui dividing header"> 推 荐 </h1>
-                <div class="ui horizontal divider"></div>
                 <!--卡片式-->
                 <div class="ui raised pink segment">
                     <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
                 </div>
             </div>
-    
+
             <div class="part" id="md4">
                 <h1 class="ui dividing header"> 其 他 </h1>
                 <!--卡片式-->
@@ -200,13 +187,13 @@
 
     <!--页脚部分（开始）-->
     <!--还可以借鉴GitHub的页脚：两边写字，中间有图标-->
-    <div class="ui inverted grey vertical four item footer segment" id="md5">
+    <div class="ui inverted grey vertical four item footer segment">
         <div class="ui container">
             <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="three wide column">
                     <h4 class="ui inverted header">关 于</h4>
                     <div class="ui inverted link list">
-                        <a class="item" href="#">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://github.com/">服务器支持：GitHub Pages</a>
                         <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
                         <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
                         <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
@@ -223,10 +210,8 @@
                 </div>
                 <div class="seven wide column">
                     <h4 class="ui inverted header">版权信息</h4>
-                    <p>
-                        Semantic UI样式版权归原网站所有，请勿商用！<br>
-                        Copyright ©2019~2020 BitBitcode.
-                    </p>
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <!--文件类型-->
 
+<html>
+
 <head>
     <!-- Standard Meta -->
     <meta charset="UTF-8">
@@ -49,12 +51,7 @@
         }
 
         .ui.menu {
-            margin: 3em 0em;
-            border-style: solid;
-            border-width: 2px;
-            /*设置菜单栏两边的距离，类似居中的效果*/
-            padding-right: 10%;
-            padding-left: 10%;
+            margin: 0em 0em;
         }
 
         .ui.menu:last-child {
@@ -69,7 +66,7 @@
 
 
     <!--页眉与导航栏（开始）-->
-    <div class="ui inverted grey fixed menu">
+    <div class="ui inverted grey fixed menu" style="padding-right: 10%; padding-left: 10%;">
         <!--单项菜单-->
         <div class="header item">BitBitcode</div>
         <a class="item" href="..\index.html"> 首 页 </a>
@@ -83,9 +80,9 @@
             其 他
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <a class="item"> 有趣的话 </a>
-                <a class="item"> 歌词分享 </a>
-                <a class="item"> 壁纸分享 </a>
+                <a class="item" href="..\(5)Others\sentence.html"> 有趣的话 </a>
+                <a class="item" href="..\(5)Others\lyric.html"> 歌词分享 </a>
+                <a class="item" href="..\(5)Others\wallpaper.html"> 壁纸分享 </a>
                 <div class="divider"></div>
                 <a class="item" href="(5)Others.html">其 他</a>
                 <div class="divider"></div>
@@ -97,7 +94,7 @@
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent inverted icon input">
-                    <input type="text" placeholder="点我搜索哦">
+                    <input type="text" placeholder="搜索功能还未上线">
                     <button class="ui grey icon button"><i class="search icon"></i></button>
                 </div>
             </div>
@@ -108,9 +105,10 @@
 
 
     <!--正文部分（开始）-->
-    <div id="mainbody">
-        <div class="MFD_Light_Navigation">
-            <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0">
+    <div class="MFD_Light_Navigation">
+        <!--侧边二级导航栏-->
+        <div id="sidebar">
+            <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0; font-size: 16px">
                 <a class="active item" href="#md1"> 前 言 </a>
                 <a class="item" href="#md2"> 上 新 </a>
                 <a class="item" href="#md3"> 推 荐 </a>
@@ -118,46 +116,64 @@
                 <a class="item"> 待 续 </a>
             </div>
         </div>
-    
+
         <div class="MFD_Light_Content">
             <div class="part" id="md1">
-    
                 <h1 class="ui dividing header"> 前 言 </h1>
-    
-                <h2> C语言 </h2>
+                <h2> 简 介 </h2>
+                <img class="ui right floated image" src="..\images\python-logo.png">
                 <p>
-                    C语言是一门面向过程的、抽象化的通用程序设计语言，广泛应用于底层开发。
-                    C语言能以简易的方式编译、处理低级存储器。
-                    C语言是仅产生少量的机器语言以及不需要任何运行环境支持便能运行的高效率程序设计语言。
-                    尽管C语言提供了许多低级处理的功能，但仍然保持着跨平台的特性，
-                    以一个标准规格写出的C语言程序可在包括类似嵌入式处理器以及超级计算机等作业平台的许多计算机平台上进行编译。
+                    Python是一种跨平台的计算机程序设计语言。
+                    是一种面向对象的动态类型语言，
+                    最初被设计用于编写自动化脚本(shell)，
+                    随着版本的不断更新和语言新功能的添加，越来越多被用于独立的、大型项目的开发。
                 </p>
-    
-                <h2> C++ </h2>
+                <div class="ui info message"><i class="info circle icon"></i>
+                    单词python是蟒蛇的意思，仔细看看图标就会发现是两条蛇
+                </div>
+
+                <h2> 应 用 </h2>
                 <p>
-                    C++是C语言的继承，它既可以进行C语言的过程化程序设计，
-                    又可以进行以抽象数据类型为特点的基于对象的程序设计，
-                    还可以进行以继承和多态为特点的面向对象的程序设计。
-                    C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，
-                    不仅拥有计算机高效运行的实用性特征，同时还致力于提高大规模程序的编程质量与程序设计语言的问题描述能力
+                    其实要用那些专业的术语解释Python是干什么的的确很晦涩难懂。如果你听过“爬虫”
+                    （如果不了解没关系，只要想想12306为什么要弄那么变态的验证码，你就理解“爬虫”有多么厉害，
+                    当然爬虫也分好坏，搜索引擎本身就是爬虫），
+                    其背后的编写语言大多用的是Python。而Python还可以实现自动收发邮件，自动排版Word，进行数据库管理，网站管理等等。
+                    这些应用场景听起来似乎毫不相关，但事实上这是Python有丰富的第三方库的原因。
+                    可以简单理解第三方库为别人写好的一些现成代码，比如有人想自动收发邮件，就写了一些代码，
+                    然后进行封装，发布在网上，你下载了直接用其中的一些代码就可以了。也就是大家说的“不要重复造轮子”。
                 </p>
-    
-    
+
                 <h2> 安 装 </h2>
+                <p>
+                    由于Windows系统不能直接运行Python代码，所以需要安装一个“解释器”（也就是将Python代码解释为Windows系统下能直接执行的二进制代码）。
+                    点击下方官网链接下载编译器，安装时一定要勾选“将路径添加到环境”。<br>
+                    <div class="ui message"><i class="download icon"></i> 下 载：
+                        <a href="https://www.python.org/downloads/release/python-381/"> Python 3.8 </a>
+                    </div>
+                </p>
                 <p>
                     如果你只需要一个轻量化的代码编辑器（也称文本编辑器），推荐：Visual Studio Code<br>
                     不是那个大出天际的Visual Studio，是微软推出的轻量化新编辑器，由于是轻量化的，所以需要手动配置：
                     下载编译器，下载对应语言的“扩展”，然后配置环境（仔细阅读帮助文档即可，软件内也有相应的提示信息）<br>
                     <div class="ui message"><i class="download icon"></i> 下 载：
-                        <a href="https://code.visualstudio.com/"> Visual Studio Code </a>
+                        <a href="https://code.visualstudio.com/"> Visual Studio Code </a>（完全免费）
                     </div>
                 </p>
-                <br>
+
+                <p>
+                    对于Python语言，还有一个热度很高的代码编辑器：Pycharm<br>
+                    由于没有深度使用，也不能给出更多的测评建议。但是的确和Visual Studio Code很像，也是轻量化的一款编辑器。
+                    不过如果你想使用一些高级功能，需要付费的Professional版本，当然免费版作为初学是完全够用的。
+                    <div class="ui message"><i class="download icon"></i> 下 载：
+                        <a href="https://www.jetbrains.com/zh-cn/pycharm/"> Pycharm </a>（下载免费的Community版本即可）
+                    </div>
+                </p>
+
                 <p>
                     如果你想要完整的编程体验，那么你需要一款 IDE（Integrated Development Environment，集成开发环境），
                     包括代码编辑器、编译器、调试器和图形用户界面等工具。
                     集成了代码编写功能、分析功能、编译功能、调试功能等一体化的开发软件服务套。<br>
-                    推荐：Visual Studio（大出天际的那个，不过现在有所改善），是微软成熟的开发软件，最新版本是2019。<br>
+                    推荐：Visual Studio（大出天际的那个，不过现在有所改善），是微软成熟的开发软件，安装时选择需要的“工作负载”，无需手动配置。最新版本是2019。<br>
                     <div class="ui message"> <i class="download icon"></i> 下 载：
                         <a href="https://visualstudio.microsoft.com"> Visual Studio 2019</a>（下载免费的Community版本即可）
                     </div>
@@ -166,27 +182,24 @@
                     当然还有很多编辑器，大家可以根据自己的情况和喜好自行选择。
                 </div>
             </div>
-    
-    
+
+
             <div class="part" id="md2">
                 <h1 class="ui dividing header"> 上 新 </h1>
-                <div class="ui horizontal divider"></div>
                 <!--卡片式-->
                 <div class="ui raised pink segment">
                     <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
                 </div>
-    
             </div>
-    
+
             <div class="part" id="md3">
                 <h1 class="ui dividing header"> 推 荐 </h1>
-                <div class="ui horizontal divider"></div>
                 <!--卡片式-->
                 <div class="ui raised pink segment">
                     <h2><i class="big yellow exclamation triangle icon"> </i>施工中</h2>
                 </div>
             </div>
-    
+
             <div class="part" id="md4">
                 <h1 class="ui dividing header"> 其 他 </h1>
                 <!--卡片式-->
@@ -207,7 +220,7 @@
                 <div class="three wide column">
                     <h4 class="ui inverted header">关 于</h4>
                     <div class="ui inverted link list">
-                        <a class="item" href="#">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://github.com/">服务器支持：GitHub Pages</a>
                         <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
                         <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
                         <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
@@ -224,10 +237,8 @@
                 </div>
                 <div class="seven wide column">
                     <h4 class="ui inverted header">版权信息</h4>
-                    <p>
-                        Semantic UI样式版权归原网站所有，请勿商用！<br>
-                        Copyright ©2019~2020 BitBitcode.
-                    </p>
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
                 </div>
             </div>
         </div>
