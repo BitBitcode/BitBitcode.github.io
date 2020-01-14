@@ -1,6 +1,22 @@
 /*自定义的主页样式*/
 
 
+/*适配手机屏幕*/
+@media screen and(max-device-width: 400px){
+    /*如果屏幕宽度小于400像素，则column块取消浮动（float:none）、宽度自动调节（width:auto）*/
+    #start{
+    width:auto;
+    max-height: 30%;
+    }
+
+    img{
+        max-width:100%;
+    }
+}
+
+
+
+
 /*规定 “类” 为 “background_img” 的样式，此处用来实现自动调整大小的背景图片*/
 .background {
     /*让整个div固定在屏幕的最上方和最左边*/
@@ -46,12 +62,17 @@
 }
 
 
+.wrapper {
+  position : relative;
+  padding-bottom : 75%;
+}
+
+
 /*规定 id 为 “start” 的样式，此处用来实现半透明背景，以及流出内边框*/
 #start {
     text-align: center;
     height: 100%;
     width: 100%;
-    max-height: 1280px;
     background-color: rgba(240,248,255,0.1);
 
     padding-top: 25%;
