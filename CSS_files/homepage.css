@@ -2,11 +2,12 @@
 
 
 /*适配手机屏幕*/
-@media screen and(max-device-width: 400px){
+@media screen and(orientation: portrait){
     /*如果屏幕宽度小于400像素，则column块取消浮动（float:none）、宽度自动调节（width:auto）*/
     #start{
     width:auto;
     max-height: 30%;
+    padding-top: 10%;
     }
 
     img{
@@ -57,14 +58,14 @@
     /*图片的位置，居中，靠左对齐*/
     background-position: center 0;
 
-    /*高斯模糊滤镜（会模糊整个div内的所有内容），模糊半径：15px*/
+    /*高斯模糊滤镜（会模糊整个div内的所有内容），模糊半径：15px */
     filter: blur(15px);
 }
 
 
 .wrapper {
   position : relative;
-  padding-bottom : 75%;
+  padding-bottom : 50%;
 }
 
 
@@ -75,18 +76,44 @@
     width: 100%;
     background-color: rgba(240,248,255,0.1);
 
-    padding-top: 25%;
-    padding-bottom: 0%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+
+/*文字 “为世界上所有的美好而战” 的样式*/
+#headline{
+    font-size: 6em;        /* 文字高度，相对字体大小：80÷16=5 */
+    text-align: center;        /*水平对齐方式：居中*/
+    line-height: 150%;
+    color: rgba(255,255,255,1);  /*设置颜色，参数分别为：（红，绿，蓝，透明度）*/
+    font-family: STZhongsong, Microsoft YaHei;
+    font-style: normal;
+    text-shadow: 7px 7px 5px rgba(0,0,0,1.00);
+    /*文字阴影：x方向距离 y方向距离 模糊半径 阴影颜色*/
+}
+
+
+
+/*文字 “梦想，再大也不嫌大...” 的样式*/
+#subword{
+    font-size: 1.5em;        /* 相对字体大小：20÷16=1.25 */
+    line-height: 150%;
+    text-align: center;
+    color: rgba(255,255,255,1);
+    font-style: normal;
+    text-shadow: 4px 4px 8px rgba(0,0,0,1.00);
 }
 
 
 /*规定所有段落的样式*/
 p {
-    font-size: 16;
+    font-size: 1em;
     text-indent: 0em;
     background: transparent;        /*此项设置相当于文字底纹（当前是透明）*/
-    line-height: 150%;
+    line-height: 150%;        /*行距：1.5倍*/
 }
+
 
 /*【Microsoft Fluent Design】浅色 - 不透明度：40% - 导航栏，*/
 /*注意：只有设置了“border-style”，其他的“border-XXX”属性才能起作用！！！*/

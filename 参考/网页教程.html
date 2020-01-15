@@ -1,46 +1,183 @@
-<!DOCTYPE html>        <!--文件类型-->
+<!DOCTYPE html>
+<!--文件类型-->
 <html lang=en>
 
-<head>                                <!--网页头部-->
-    <meta charset = "UTF-8"> 
-    <title>我的主页</title>            <!--标题-->
-    
+<!--网页头部-->
+
+<head>
+    <meta charset="UTF-8">
+    <!--页面标题-->
+    <title>我的主页</title>
+
+
     <!--调用CSS文件（不成对标签）-->
-    <link href="segment.css" rel="stylesheet" type="text/css">
+    <link  rel="stylesheet" type="text/css">
     <!--注意：由于在同一文件夹下，这里CSS文件的地址是相对地址-->
+
+    <!--内部样式定义-->
+    <style>
+        <!--清除浏览器的默认边距-->
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        #mainbody {
+            top: 0;
+            left: 0;
+            width: 70%;
+            padding: 5%;
+            margin-top: 0;
+            margin-right: 15%;
+            margin-bottom: 0;
+            margin-left: 15%;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        #box {
+            width: 400px;
+            height: 300px;
+
+            margin: 50px;
+            border-style: solid;
+            border-width: 2px 2px 2px 2px;
+            border-color: rgba(200, 200, 200, 1);
+
+            padding: 20px;
+            font-family: SimKai, Microsoft YaHei;
+            text-align: left;
+        }
+
+        img {
+            width: 600px;
+            zoom: 1;
+        }
+
+        .juzhong {
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body>                                <!--网页主体-->
-    <!--各级标题-->
-    <h1>一级标题</h1>
-    <h2>二级标题</h2>
-    <h3>三级标题</h3>
-    <h4>四级标题</h4>
-    <h5>五级标题</h5>
-    <h6>六级标题</h6>
-    <!--注意：最多只有6级标题-->
+<body>
+    <!--网页主体-->
+    <div id="mainbody">
+        <!--各级标题-->
+        <h1>一级标题</h1>
+        <!--段落-->
+        <p>
+            第一段
+        </p>
+        <p>
+            第二段
+        </p>
+        <p>
+            第三段
+        </p>
 
-    <!--段落-->
-    <p>
-        
-        <br>        <!--换行标签-->
-        第二段
+        <h2 id="md">二级标题</h2>
+        <!--段落-->
+        <p>
+            第一段
+        </p>
+        <p>
+            第二段
+        </p>
+        <p>
+            第三段
+        </p>
+
+        <h3>三级标题</h3>
+        <!--段落-->
+        <p>
+            第一段
+        </p>
+        <p>
+            第二段
+        </p>
+        <p>
+            第三段
+        </p>
+
+        <h4>四级标题</h4>
+        <!--段落-->
+        <p>
+            第一段
+        </p>
+        <p>
+            第二段
+        </p>
+        <p>
+            第三段
+        </p>
+
+        <h5>五级标题</h5>
+        <!--段落-->
+        <p>
+            第一段
+        </p>
+        <p>
+            第二段
+        </p>
+        <p>
+            第三段
+        </p>
+
+        <h6>六级标题</h6>
+        <!--段落-->
+        <p>
+            第一段
+        </p>
+        <p>
+            第二段
+        </p>
+        <p>
+            第三段
+        </p>
+        <!--注意：最多只有6级标题-->
+
+
+        <!--链接-->
+        <h1>链接示例</h1>
+        <!--外部-->
+        <a href="http://github.com/BitBitcode">我的GitHub主页</a>（外部链接）<br>
+        <!--内部-->
+        <a href="分块式布局.html">分块式布局</a>（内部链接）<br>
+        <!--锚点-->
+        <a href="#md">跳转到 “二级标题”</a>（锚点）<br>
+        <!--换行标签-->
+        <br><br><br>
+
+
+
+        <!--显示图片（不成对标签）-->
+        <h1>图片示例</h1>
+        <div class="juzhong">
+            <img src="..\images\为世界上所有的美好而战.png">
+        </div>
+
+
+        <!--表格（未完）-->
+        <h1>表格示例</h1>
+        尚未制作
         <br>
-    </p>
 
-    <!--网页链接-->
-    <a href="http://github.com/BitBitcode">我的GitHub主页</a>
-    <a href="韶华未既.html">美文</a>
 
-    <br>        <!--分段标签-->
-    <!--显示图片（不成对标签）-->
-    <img src="BitBitcode.github.io\eg-picture.jpg">
+        <h1>盒子模型</h1>
+        <div class="juzhong">
+            <div id="box">
+                <h3 style="text-align: center">盒子示例</h3>
+                右键打开浏览器的“检查元素”功能，观察浏览器用不同颜色指示出“margin”、“border”和“padding”分别是哪部分？<br>
+                margin：内边距<br>
+                border：边框<br>
+                padding：内边距<br>
+            </div>
+        </div>
 
-    <!--表格（未完）--><!--网页头部-->
 
-    <br>
-    <!--版权信息-->
-    <p>Copyright ©2019-2020 BitBitcode.</p>
-
+        <!--版权信息-->
+        <p style="text-align: center;">Copyright ©2019-2020 BitBitcode.</p>
+    </div>
 </body>
+
 </html>
