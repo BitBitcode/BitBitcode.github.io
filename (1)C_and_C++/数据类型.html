@@ -1,0 +1,2275 @@
+<!DOCTYPE html>
+<!--文件类型-->
+
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+
+    <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
+    <title>壁纸分享 - BitBitcode</title>
+
+
+    <!--调用 CSS 样式文件-->
+    <link href="..\CSS_files\semantic.css" rel="stylesheet" type="text/css">
+    <link href="..\CSS_files\singlepage.css" rel="stylesheet" type="text/css">
+
+
+    <!--调用 JavaScript 文件-->
+    <!--注意：“jquery-3.1.1.js”和“semantic.js”的调用顺序不能变！！！-->
+    <script src="..\JavaScript_files\jquery-3.1.1.js"> </script>
+    <script src="..\JavaScript_files\semantic.js"> </script>
+
+
+    <!--含有JavaScript效果组件还需要单独调用-->
+    <script>
+        $(document)
+            .ready(function () {
+                $('.ui.menu .ui.dropdown')
+                    .dropdown({
+                        on: 'hover'
+                    });
+                $('.ui.menu a.item')
+                    .on('click', function () {
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active')
+                            ;
+                    })
+                    ;
+            })
+            ;
+    </script>
+
+
+    <!--内部样式定义-->
+    <style>
+        body {
+            padding: 0em;
+        }
+
+        .ui.menu {
+            margin: 0em 0em;
+        }
+
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--全页面背景-->
+    <div class="background"> </div>
+
+
+    <!--页眉与导航栏（开始）-->
+    <div class="ui inverted grey fixed menu" style="padding-right: 10%; padding-left: 10%;">
+        <!--单项菜单-->
+        <div class="header item">BitBitcode</div>
+        <a class="item" href="..\index.html"> 首 页 </a>
+        <a class="item" href="..\(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+        <a class="item" href="..\(0)Menu_Pages\(2)CMD.html"> CMD </a>
+        <a class="item" href="..\(0)Menu_Pages\(3)Python.html"> Python </a>
+        <a class="item" href="..\(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
+
+        <!--下拉菜单-->
+        <div tabindex="0" class="ui dropdown item">
+            更 多
+            <i class="dropdown icon"></i>
+            <div tabindex="-1" class="menu transition hidden">
+                <a class="active item" href="sentence.html"> 有趣的话 </a>
+                <a class="item" href="lyric.html"> 歌词分享 </a>
+                <a class="item" href="wallpaper.html"> 壁纸分享 </a>
+                <div class="divider"></div>
+                <a class="item" href="..\(0)Menu_Pages\(5)Others.html">其 他</a>
+                <div class="divider"></div>
+                <a class="item" href="..\README.md">关于本站</a>
+            </div>
+        </div>
+
+        <!--右边搜索栏和链接-->
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent inverted icon input">
+                    <input type="text" placeholder="搜索功能还未上线">
+                    <button class="ui grey icon button"><i class="search icon"></i></button>
+                </div>
+            </div>
+            <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
+        </div>
+    </div>
+    <!--页眉与导航栏（结束）-->
+
+    <!--正文部分（开始）-->
+    <div class="MFD_Light_Content">
+        <div class="ui raised blue segment">
+            <h2>数据类型总结</h2>
+        </div>
+        <div class="part">
+            <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
+                xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+                xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+            
+            <head>
+                <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+                <meta name=ProgId content=Word.Document>
+                <meta name=Generator content="Microsoft Word 15">
+                <meta name=Originator content="Microsoft Word 15">
+                <link rel=File-List href="整型变量（UTF-8）.files/filelist.xml">
+                <!--[if gte mso 9]><xml>
+             <o:DocumentProperties>
+              <o:Author>Kiana Kaslana</o:Author>
+              <o:LastAuthor>Kiana Kaslana</o:LastAuthor>
+              <o:Revision>2</o:Revision>
+              <o:TotalTime>6</o:TotalTime>
+              <o:Created>2020-01-15T16:52:00Z</o:Created>
+              <o:LastSaved>2020-01-15T16:52:00Z</o:LastSaved>
+              <o:Pages>1</o:Pages>
+              <o:Words>151</o:Words>
+              <o:Characters>863</o:Characters>
+              <o:Lines>7</o:Lines>
+              <o:Paragraphs>2</o:Paragraphs>
+              <o:CharactersWithSpaces>1012</o:CharactersWithSpaces>
+              <o:Version>16.00</o:Version>
+             </o:DocumentProperties>
+             <o:OfficeDocumentSettings>
+              <o:AllowPNG/>
+             </o:OfficeDocumentSettings>
+            </xml><![endif]-->
+                <link rel=themeData href="整型变量（UTF-8）.files/themedata.thmx">
+                <link rel=colorSchemeMapping href="整型变量（UTF-8）.files/colorschememapping.xml">
+                <!--[if gte mso 9]><xml>
+             <w:WordDocument>
+              <w:SpellingState>Clean</w:SpellingState>
+              <w:GrammarState>Clean</w:GrammarState>
+              <w:TrackMoves>false</w:TrackMoves>
+              <w:TrackFormatting/>
+              <w:PunctuationKerning/>
+              <w:DrawingGridHorizontalSpacing>5.25 磅</w:DrawingGridHorizontalSpacing>
+              <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+              <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+              <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+              <w:ValidateAgainstSchemas/>
+              <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+              <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+              <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+              <w:DoNotPromoteQF/>
+              <w:LidThemeOther>EN-US</w:LidThemeOther>
+              <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+              <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+              <w:Compatibility>
+               <w:SpaceForUL/>
+               <w:BalanceSingleByteDoubleByteWidth/>
+               <w:DoNotLeaveBackslashAlone/>
+               <w:ULTrailSpace/>
+               <w:DoNotExpandShiftReturn/>
+               <w:AdjustLineHeightInTable/>
+               <w:BreakWrappedTables/>
+               <w:SnapToGridInCell/>
+               <w:WrapTextWithPunct/>
+               <w:UseAsianBreakRules/>
+               <w:DontGrowAutofit/>
+               <w:SplitPgBreakAndParaMark/>
+               <w:EnableOpenTypeKerning/>
+               <w:DontFlipMirrorIndents/>
+               <w:OverrideTableStyleHps/>
+               <w:UseFELayout/>
+              </w:Compatibility>
+              <m:mathPr>
+               <m:mathFont m:val="Cambria Math"/>
+               <m:brkBin m:val="before"/>
+               <m:brkBinSub m:val="&#45;-"/>
+               <m:smallFrac m:val="off"/>
+               <m:dispDef/>
+               <m:lMargin m:val="0"/>
+               <m:rMargin m:val="0"/>
+               <m:defJc m:val="centerGroup"/>
+               <m:wrapIndent m:val="1440"/>
+               <m:intLim m:val="subSup"/>
+               <m:naryLim m:val="undOvr"/>
+              </m:mathPr></w:WordDocument>
+            </xml><![endif]-->
+                <!--[if gte mso 9]><xml>
+             <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+              DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+              LatentStyleCount="376">
+              <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+              <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+              <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 6"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 7"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 8"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index 9"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 1"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 2"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 3"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 4"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 5"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 6"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 7"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 8"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" Name="toc 9"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Normal Indent"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="footnote text"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="annotation text"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="header"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="footer"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="index heading"/>
+              <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="table of figures"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="envelope address"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="envelope return"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="footnote reference"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="annotation reference"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="line number"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="page number"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="endnote reference"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="endnote text"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="table of authorities"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="macro"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="toa heading"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Bullet"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Number"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Bullet 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Bullet 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Bullet 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Bullet 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Number 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Number 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Number 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Number 5"/>
+              <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Closing"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Signature"/>
+              <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+               UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text Indent"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Continue"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Continue 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Continue 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Continue 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="List Continue 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Message Header"/>
+              <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Salutation"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Date"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text First Indent"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text First Indent 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Note Heading"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text Indent 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Body Text Indent 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Block Text"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Hyperlink"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="FollowedHyperlink"/>
+              <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+              <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Document Map"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Plain Text"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="E-mail Signature"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Top of Form"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Bottom of Form"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Normal (Web)"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Acronym"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Address"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Cite"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Code"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Definition"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Keyboard"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Preformatted"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Sample"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Typewriter"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="HTML Variable"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Normal Table"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="annotation subject"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="No List"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Outline List 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Outline List 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Outline List 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Simple 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Simple 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Simple 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Classic 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Classic 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Classic 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Classic 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Colorful 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Colorful 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Colorful 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Columns 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Columns 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Columns 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Columns 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Columns 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 6"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 7"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Grid 8"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 4"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 5"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 6"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 7"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table List 8"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table 3D effects 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table 3D effects 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table 3D effects 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Contemporary"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Elegant"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Professional"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Subtle 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Subtle 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Web 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Web 2"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Web 3"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Balloon Text"/>
+              <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Table Theme"/>
+              <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+              <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+              <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+              <w:LsdException Locked="false" Priority="34" QFormat="true"
+               Name="List Paragraph"/>
+              <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+              <w:LsdException Locked="false" Priority="30" QFormat="true"
+               Name="Intense Quote"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+              <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+              <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+              <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+              <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+              <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+              <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+              <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+              <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+              <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+              <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+              <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+              <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+              <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+              <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+              <w:LsdException Locked="false" Priority="19" QFormat="true"
+               Name="Subtle Emphasis"/>
+              <w:LsdException Locked="false" Priority="21" QFormat="true"
+               Name="Intense Emphasis"/>
+              <w:LsdException Locked="false" Priority="31" QFormat="true"
+               Name="Subtle Reference"/>
+              <w:LsdException Locked="false" Priority="32" QFormat="true"
+               Name="Intense Reference"/>
+              <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+              <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+               UnhideWhenUsed="true" Name="Bibliography"/>
+              <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+               UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+              <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+              <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+              <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+              <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+              <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+              <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+              <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+              <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+              <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="Grid Table 1 Light Accent 1"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="Grid Table 6 Colorful Accent 1"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="Grid Table 7 Colorful Accent 1"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="Grid Table 1 Light Accent 2"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="Grid Table 6 Colorful Accent 2"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="Grid Table 7 Colorful Accent 2"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="Grid Table 1 Light Accent 3"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="Grid Table 6 Colorful Accent 3"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="Grid Table 7 Colorful Accent 3"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="Grid Table 1 Light Accent 4"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="Grid Table 6 Colorful Accent 4"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="Grid Table 7 Colorful Accent 4"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="Grid Table 1 Light Accent 5"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="Grid Table 6 Colorful Accent 5"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="Grid Table 7 Colorful Accent 5"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="Grid Table 1 Light Accent 6"/>
+              <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+              <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+              <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+              <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="Grid Table 6 Colorful Accent 6"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="Grid Table 7 Colorful Accent 6"/>
+              <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+              <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+              <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="List Table 1 Light Accent 1"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="List Table 6 Colorful Accent 1"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="List Table 7 Colorful Accent 1"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="List Table 1 Light Accent 2"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="List Table 6 Colorful Accent 2"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="List Table 7 Colorful Accent 2"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="List Table 1 Light Accent 3"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="List Table 6 Colorful Accent 3"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="List Table 7 Colorful Accent 3"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="List Table 1 Light Accent 4"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="List Table 6 Colorful Accent 4"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="List Table 7 Colorful Accent 4"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="List Table 1 Light Accent 5"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="List Table 6 Colorful Accent 5"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="List Table 7 Colorful Accent 5"/>
+              <w:LsdException Locked="false" Priority="46"
+               Name="List Table 1 Light Accent 6"/>
+              <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+              <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+              <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+              <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+              <w:LsdException Locked="false" Priority="51"
+               Name="List Table 6 Colorful Accent 6"/>
+              <w:LsdException Locked="false" Priority="52"
+               Name="List Table 7 Colorful Accent 6"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Mention"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Smart Hyperlink"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Hashtag"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Unresolved Mention"/>
+              <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+               Name="Smart Link"/>
+             </w:LatentStyles>
+            </xml><![endif]-->
+                <style>
+                    <!--
+                    /* Font Definitions */
+                    @font-face {
+                        font-family: 宋体;
+                        panose-1: 2 1 6 0 3 1 1 1 1 1;
+                        mso-font-alt: SimSun;
+                        mso-font-charset: 134;
+                        mso-generic-font-family: auto;
+                        mso-font-pitch: variable;
+                        mso-font-signature: 3 680460288 22 0 262145 0;
+                    }
+            
+                    @font-face {
+                        font-family: "Cambria Math";
+                        panose-1: 2 4 5 3 5 4 6 3 2 4;
+                        mso-font-charset: 0;
+                        mso-generic-font-family: roman;
+                        mso-font-pitch: variable;
+                        mso-font-signature: 3 0 0 0 1 0;
+                    }
+            
+                    @font-face {
+                        font-family: 等线;
+                        panose-1: 2 1 6 0 3 1 1 1 1 1;
+                        mso-font-alt: DengXian;
+                        mso-font-charset: 134;
+                        mso-generic-font-family: auto;
+                        mso-font-pitch: variable;
+                        mso-font-signature: -1610612033 953122042 22 0 262159 0;
+                    }
+            
+                    @font-face {
+                        font-family: Calibri;
+                        panose-1: 2 15 5 2 2 2 4 3 2 4;
+                        mso-font-charset: 0;
+                        mso-generic-font-family: swiss;
+                        mso-font-pitch: variable;
+                        mso-font-signature: -536859905 1073786111 1 0 511 0;
+                    }
+            
+                    @font-face {
+                        font-family: 微软雅黑;
+                        panose-1: 2 11 5 3 2 2 4 2 2 4;
+                        mso-font-charset: 134;
+                        mso-generic-font-family: swiss;
+                        mso-font-pitch: variable;
+                        mso-font-signature: -2147483001 718224464 22 0 262175 0;
+                    }
+            
+                    @font-face {
+                        font-family: "\@微软雅黑";
+                        mso-font-charset: 134;
+                        mso-generic-font-family: swiss;
+                        mso-font-pitch: variable;
+                        mso-font-signature: -2147483001 718224464 22 0 262175 0;
+                    }
+            
+                    @font-face {
+                        font-family: "\@宋体";
+                        panose-1: 2 1 6 0 3 1 1 1 1 1;
+                        mso-font-charset: 134;
+                        mso-generic-font-family: auto;
+                        mso-font-pitch: variable;
+                        mso-font-signature: 3 680460288 22 0 262145 0;
+                    }
+            
+                    @font-face {
+                        font-family: "\@等线";
+                        panose-1: 2 1 6 0 3 1 1 1 1 1;
+                        mso-font-charset: 134;
+                        mso-generic-font-family: auto;
+                        mso-font-pitch: variable;
+                        mso-font-signature: -1610612033 953122042 22 0 262159 0;
+                    }
+            
+                    /* Style Definitions */
+                    p.MsoNormal,
+                    li.MsoNormal,
+                    div.MsoNormal {
+                        mso-style-unhide: no;
+                        mso-style-qformat: yes;
+                        mso-style-parent: "";
+                        margin: 0cm;
+                        margin-bottom: .0001pt;
+                        text-align: justify;
+                        text-justify: inter-ideograph;
+                        mso-pagination: none;
+                        font-size: 10.5pt;
+                        mso-bidi-font-size: 11.0pt;
+                        font-family: 等线;
+                        mso-ascii-font-family: 等线;
+                        mso-ascii-theme-font: minor-latin;
+                        mso-fareast-font-family: 等线;
+                        mso-fareast-theme-font: minor-fareast;
+                        mso-hansi-font-family: 等线;
+                        mso-hansi-theme-font: minor-latin;
+                        mso-bidi-font-family: "Times New Roman";
+                        mso-bidi-theme-font: minor-bidi;
+                        mso-font-kerning: 1.0pt;
+                    }
+            
+                    span.GramE {
+                        mso-style-name: "";
+                        mso-gram-e: yes;
+                    }
+            
+                    .MsoChpDefault {
+                        mso-style-type: export-only;
+                        mso-default-props: yes;
+                        font-family: 等线;
+                        mso-bidi-font-family: "Times New Roman";
+                        mso-bidi-theme-font: minor-bidi;
+                    }
+            
+                    /* Page Definitions */
+                    @page {
+                        mso-page-border-surround-header: no;
+                        mso-page-border-surround-footer: no;
+                    }
+            
+                    @page WordSection1 {
+                        size: 595.3pt 841.9pt;
+                        margin: 36.0pt 36.0pt 36.0pt 36.0pt;
+                        mso-header-margin: 42.55pt;
+                        mso-footer-margin: 49.6pt;
+                        mso-paper-source: 0;
+                        layout-grid: 15.6pt;
+                    }
+            
+                    div.WordSection1 {
+                        page: WordSection1;
+                    }
+            
+                    /* List Definitions */
+                    @list l0 {
+                        mso-list-id: 402870764;
+                        mso-list-template-ids: 664296784;
+                    }
+            
+                    @list l0:level1 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 36.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level2 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 72.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level3 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 108.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level4 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 144.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level5 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 180.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level6 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 216.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level7 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 252.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level8 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 288.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l0:level9 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 324.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1 {
+                        mso-list-id: 622689125;
+                        mso-list-template-ids: 1219115438;
+                    }
+            
+                    @list l1:level1 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 36.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level2 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 72.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level3 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 108.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level4 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 144.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level5 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 180.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level6 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 216.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level7 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 252.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level8 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 288.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l1:level9 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 324.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2 {
+                        mso-list-id: 974943873;
+                        mso-list-template-ids: 646484098;
+                    }
+            
+                    @list l2:level1 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 36.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level2 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: o;
+                        mso-level-tab-stop: 72.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: "Courier New";
+                        mso-bidi-font-family: "Times New Roman";
+                    }
+            
+                    @list l2:level3 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 108.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level4 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 144.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level5 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 180.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level6 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 216.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level7 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 252.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level8 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 288.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    @list l2:level9 {
+                        mso-level-number-format: bullet;
+                        mso-level-text: ;
+                        mso-level-tab-stop: 324.0pt;
+                        mso-level-number-position: left;
+                        text-indent: -18.0pt;
+                        mso-ansi-font-size: 10.0pt;
+                        font-family: Symbol;
+                    }
+            
+                    ol {
+                        margin-bottom: 0cm;
+                    }
+            
+                    ul {
+                        margin-bottom: 0cm;
+                    }
+                    -->
+                </style>
+                <!--[if gte mso 10]>
+            <style>
+             /* Style Definitions */
+             table.MsoNormalTable
+            	{mso-style-name:普通表格;
+            	mso-tstyle-rowband-size:0;
+            	mso-tstyle-colband-size:0;
+            	mso-style-noshow:yes;
+            	mso-style-priority:99;
+            	mso-style-parent:"";
+            	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+            	mso-para-margin:0cm;
+            	mso-para-margin-bottom:.0001pt;
+            	mso-pagination:widow-orphan;
+            	font-size:10.5pt;
+            	mso-bidi-font-size:11.0pt;
+            	font-family:等线;
+            	mso-ascii-font-family:等线;
+            	mso-ascii-theme-font:minor-latin;
+            	mso-fareast-font-family:等线;
+            	mso-fareast-theme-font:minor-fareast;
+            	mso-hansi-font-family:等线;
+            	mso-hansi-theme-font:minor-latin;
+            	mso-font-kerning:1.0pt;}
+            </style>
+            <![endif]-->
+                <!--[if gte mso 9]><xml>
+             <o:shapedefaults v:ext="edit" spidmax="1026"/>
+            </xml><![endif]-->
+                <!--[if gte mso 9]><xml>
+             <o:shapelayout v:ext="edit">
+              <o:idmap v:ext="edit" data="1"/>
+             </o:shapelayout></xml><![endif]-->
+            </head>
+            
+            <body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+            
+                <div class=WordSection1 style='layout-grid:15.6pt'>
+            
+                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            mso-outline-level:1'><b><span style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>整型变量<span lang=EN-US>
+                                    <o:p></o:p>
+                                </span></span></b></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>短整型（<span lang=EN-US>2B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+            微软雅黑;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:
+            11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:微软雅黑;
+            color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>16bit</span><span style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>）<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号短整型：<span lang=EN-US>[signed]&nbsp;<b>short</b>&nbsp;[int]
+                                <o:p></o:p></span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号短整型：<b><span lang=EN-US>unsigned short</span></b><span
+                                lang=EN-US>&nbsp;[int]<o:p></o:p></span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>基本整型（<span lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;
+            mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:
+            X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>32bit</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>）<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号基本整型：<span lang=EN-US>[signed] <b>int</b>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号基本整型：<b><span lang=EN-US>unsigned int</span></b><span
+                                lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>长整型（<span lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:
+            11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
+            mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>32bit</span><span style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>）<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号长整型：<span lang=EN-US>[signed] <b>long</b>&nbsp;[int]<o:p>
+                                </o:p></span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号长整型：<b><span lang=EN-US>unsigned long</span></b><span
+                                lang=EN-US>&nbsp;[int]<o:p></o:p></span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>注意：<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span
+                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>整型变量的溢出：如果变量的数值超过该类型变量的最大范围，则发生数据溢出，但程序不会报错！！所以要十分小心此类错误。<span
+                                lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            mso-outline-level:1'><b><span lang=EN-US style='font-size:11.0pt;font-family:
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:18.0pt'>&nbsp;<o:p></o:p></span></b></p>
+            
+                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            mso-outline-level:1'><span class=GramE><b><span style='font-size:16.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:
+            18.0pt'>实型变量</span></b></span><b><span lang=EN-US style='font-size:16.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:
+            18.0pt'>
+                                <o:p></o:p>
+                            </span></b></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l1 level1 lfo2;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span class=GramE><span style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>单精度实型变量</span></span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>：<span lang=EN-US>float</span>（<span
+                                lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;
+            mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:
+            X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>32bit</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>）<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l1 level1 lfo2;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span class=GramE><span style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>双精度实型变量</span></span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>：<span lang=EN-US>double</span>（<span
+                                lang=EN-US>8B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+            "Calibri",sans-serif;mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:
+            0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+            mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:0pt;mso-ansi-language:
+            X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>64bit</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>）<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l1 level1 lfo2;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>长<span class=GramE>精度实型变量</span>：<span lang=EN-US>long
+                                double</span>（<span lang=EN-US>8B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+            微软雅黑;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:
+            11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:微软雅黑;
+            color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>64bit</span><span style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>）<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            mso-outline-level:1'><b><span lang=EN-US style='font-size:11.0pt;font-family:
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:18.0pt'>&nbsp;<o:p></o:p></span></b></p>
+            
+                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            mso-outline-level:1'><b><span style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>字符型变量<span lang=EN-US>
+                                    <o:p></o:p>
+                                </span></span></b></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l0 level1 lfo3;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span lang=EN-US style='font-size:11.0pt;
+            font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+            0pt'>char<o:p></o:p></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
+            l0 level1 lfo3;tab-stops:list 36.0pt;vertical-align:middle'>
+                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+            mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
+            mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
+                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span></span></span>
+                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>实质存储的是<span
+                                lang=EN-US>ASCLL</span>码，所以字符变量可以和整型数据通用，还可以和整型数据运算<span lang=EN-US>
+                                <o:p></o:p>
+                            </span></span></p>
+            
+                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+            line-height:18.0pt;mso-pagination:widow-orphan;vertical-align:middle'><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:black;mso-font-kerning:0pt'>
+                            <o:p>&nbsp;</o:p>
+                        </span></p>
+            
+                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            mso-outline-level:1'><b><span lang=EN-US style='font-size:16.0pt;font-family:
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>&nbsp;</span></b><b><span style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            宋体;color:#1E4E79;mso-font-kerning:18.0pt'>各种数据类型总结<span lang=EN-US>
+                                    <o:p></o:p>
+                                </span></span></b></p>
+            
+                    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 title="" summary="" style='border-collapse:collapse;border:none;mso-border-alt:solid #A3A3A3 1.0pt;
+             mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
+                        <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              background:#0070C0;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>类<span lang=EN-US><span style='mso-spacerun:yes'> 
+                                                </span></span>型</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border:solid #A3A3A3 1.0pt;
+              border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>子类型</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border:solid #A3A3A3 1.0pt;
+              border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>关键字</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border:solid #A3A3A3 1.0pt;
+              border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>占用空间</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border:solid #A3A3A3 1.0pt;
+              border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>取值范围</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:1'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>有符号 短整型<span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>[signed]&nbsp;<b>short</b>&nbsp;[int]<o:p></o:p></span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>2B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>16bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+              mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[-32768 , 32,767</span><span lang=X-NONE style='font-size:11.0pt;
+              font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
+              windowtext;mso-font-kerning:0pt'> </span><span lang=X-NONE style='font-size:
+              11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
+              mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:2'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>无符号 短整型<span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=166 valign=top style='width:124.5pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>unsigned short</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>&nbsp;[int]<o:p></o:p></span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>2B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>16bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+              mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[0 , </span><span lang=EN-US style='font-size:11.0pt;font-family:
+              "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
+              mso-font-kerning:0pt'>65536</span><span lang=X-NONE style='font-size:11.0pt;
+              font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
+              windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:3'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>整型</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>有符号 基本整型<span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>[signed] <b>int</b>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+              mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=218 valign=top style='width:163.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>-2147483648</span><span lang=X-NONE style='font-size:11.0pt;font-family:
+              "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
+              mso-font-kerning:0pt;mso-ansi-language:X-NONE'> , 2147483647]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:4'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>变量</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>无符号 基本整型<span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>unsigned int</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+              mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[0 , </span><span lang=EN-US style='font-size:11.0pt;font-family:
+              "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
+              mso-font-kerning:0pt'>4294967296</span><span lang=X-NONE style='font-size:
+              11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
+              mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:5'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>有符号 长整型<span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>[signed] <b>long</b>&nbsp;[int]<o:p></o:p></span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+              mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=218 valign=top style='width:163.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>-2147483648</span><span lang=X-NONE style='font-size:11.0pt;font-family:
+              "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
+              mso-font-kerning:0pt;mso-ansi-language:X-NONE'> , 2147483647]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:6'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>无符号 长整型<span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>unsigned long</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>&nbsp;[int]<o:p></o:p></span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+              mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[0 , </span><span lang=EN-US style='font-size:11.0pt;font-family:
+              "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
+              mso-font-kerning:0pt'>4294967296</span><span lang=X-NONE style='font-size:
+              11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
+              mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:7'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#A8D08D;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>单精度实型变量</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>float</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>32bit<o:p></o:p></span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[-3.4</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>×</span><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt;mso-ansi-language:X-NONE'>10<sup>-38</sup> ,<span style='mso-spacerun:yes'>  </span></span><span lang=EN-US
+                                        style='font-size:
+              11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
+              mso-color-alt:windowtext;mso-font-kerning:0pt'>3.4</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>×<span lang=EN-US>10<sup>38</sup></span></span><span
+                                        lang=X-NONE style='font-size:
+              11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
+              mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:8'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#A8D08D;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>实型变量</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+              "微软雅黑",sans-serif;mso-bidi-font-family:宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>双精度实型变量</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>double</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>8B</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>64bit<o:p></o:p></span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[-1.7</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>×<span lang=EN-US>10<sup>-3</sup></span></span><sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>0</span></sup><sup><span lang=EN-US style='font-size:11.0pt;
+              font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
+              windowtext;mso-font-kerning:0pt'>8</span></sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'> , 1.7</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>×<span lang=EN-US>10<sup>3</sup></span></span><sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>0</span></sup><sup><span lang=EN-US style='font-size:11.0pt;
+              font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
+              windowtext;mso-font-kerning:0pt'>8</span></sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:9'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#A8D08D;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>长<span class=GramE>精度实型变量</span><span lang=EN-US>
+                                            <o:p></o:p>
+                                        </span></span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>long double</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>8B</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>64bit<o:p></o:p></span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>[-1.7</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>×<span lang=EN-US>10<sup>-3</sup></span></span><sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>0</span></sup><sup><span lang=EN-US style='font-size:11.0pt;
+              font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
+              windowtext;mso-font-kerning:0pt'>8</span></sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'> , 1.7</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
+              0pt'>×<span lang=EN-US>10<sup>3</sup></span></span><sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>0</span></sup><sup><span lang=EN-US style='font-size:11.0pt;
+              font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
+              windowtext;mso-font-kerning:0pt'>8</span></sup><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                        <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#F1937A;
+              padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>字符型变量</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>N/A</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;mso-font-kerning:0pt'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
+                                            lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>char</span></b><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>1B = 8 bit<o:p></o:p></span></p>
+                            </td>
+                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
+                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
+              X-NONE'>N/A</span><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+              mso-bidi-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>
+                                        <o:p></o:p>
+                                    </span></p>
+                            </td>
+                        </tr>
+                    </table>
+            
+                    <p class=MsoNormal><span lang=EN-US>
+                            <o:p>&nbsp;</o:p>
+                        </span></p>
+            
+                </div>
+            
+            </body>
+            
+            </html>
+        </div>
+    </div>
+    <!--正文部分（结束）-->
+
+    <!--页脚部分（开始）-->
+    <!--还可以借鉴GitHub的页脚：两边写字，中间有图标-->
+    <div class="ui inverted grey vertical four item footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">关 于</h4>
+                    <div class="ui inverted link list">
+                        <a class="item" href="https://github.com/">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
+                        <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
+                        <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">联系作者</h4>
+                    <div class="ui inverted link list">
+                        <a class="item">E-mail: smilewwc@qq.com</a>
+                        <a class="item">Telephone：000000（示例）</a>
+                        <a class="item">邮编：111111（示例）</a>
+                        <a class="item">地址：中国-China</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">版权信息</h4>
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页脚部分（结束）-->
+</body>
+
+</html>
