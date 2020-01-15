@@ -21,7 +21,6 @@
     <script src="JavaScript_files\jquery-3.1.1.js"> </script>
     <script src="JavaScript_files\semantic.js"> </script>
 
-
     <!--含有JavaScript效果组件还需要单独调用-->
     <script>
         $(document)
@@ -42,16 +41,6 @@
             })
             ;
 
-    </script>
-
-    <!--过渡效果（技术问题，没有看到效果）-->
-    <script>
-        $('.headline')
-            .transition({
-                animation: 'zoom',
-                duration: '1s',
-            })
-            ;
     </script>
 
 
@@ -163,16 +152,15 @@
 
 
     <!--开头部分（开始）-->
-    <div class="wrapper">
-        <div id="start">
-            <p id="headline">
-                为世界上所有的美好而战
-            </p>
-            <p id="subword">
-                梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
-            </p>
+    <div id="start">
+        <p id="headline">
+            为世界上所有的美好而战
+        </p>
+        <p id="subword">
+            梦想，再大也不嫌大，追梦的人，再小也不算小。<br>
+        </p>
 
-            <!--向下箭头
+        <!--向下箭头-->
             <div style="
             text-align: center; 
             color: rgba(255,255,255,0.4);
@@ -180,8 +168,9 @@
             width: 100%; 
             bottom: 10px">
                 <a style="color:rgba(255,255,255,0.4)" href="#anchor"> <i class="huge angle double down icon"> </i> </a>
-            </div>-->
-        </div>
+            </div>
+    </div>
+
     <!--开头部分（结束）-->
 
 
@@ -250,7 +239,7 @@
                 </h4>
                 <h2 class="ui header"> 突破性的界面设计 </h2>
                 <p>是的，我们用全新的思路来设计网页，以便给你带来更好的阅读体验。
-                    清爽的配色、舒适的排版、精美的插图。。。借助“Semantic UI™”的强大组件，打造出色的博客网页。<br>
+                    清爽的配色、舒适的排版、精美的插图。。。借助Semantic UI™的强大组件，打造出色的博客网页。<br>
                     Semantic作为一款开发框架，帮助开发者使用对人类友好的HTML语言构建优雅的响应式布局。
                 </p>
                 <a class="ui large blue button" href="https://semantic-ui.com/"> 尝试探索Semantic UI </a>

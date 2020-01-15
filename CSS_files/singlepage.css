@@ -54,6 +54,7 @@
     width: 70%;
     height: auto;        /*长度会根据内容自动调整*/
     background-color: rgba(240,248,255,0.8);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 
     /*内边距、边框、外边距（上右下左）*/
     padding-top: 10%;
