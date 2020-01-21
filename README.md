@@ -16,12 +16,12 @@
     - 基本完成了网站整体框架的制作
 
   + 2020.1.10 更新
-    - 重制首页
-    - 引入 Microsoft Fluent Design 设计制作了页面
+    - 重制首页，优化了首页代码与样式
+    - 引入 Microsoft Fluent Design 设计理念
 
   + 2020.1.8 发布
     - 个人网页正式部署
-    - 基于 Semantic UI 构建了主页
+    - 基于 Semantic UI 构建了首页
     - 后续仍将继续更新
 
 
@@ -48,4 +48,4 @@
   + **Semantic UI**：
     + semantic.css 等样式文件，以及基于 Semantic UI 构建的部分，代码版权归原网站所有，请勿商用！
   + **原创代码与文章**
-    + 转载请注明作者及出处，Copyright ©2020 BitBitcode.
+    + 转载请注明作者及出处，Copyright ©2019-2020 BitBitcode.
