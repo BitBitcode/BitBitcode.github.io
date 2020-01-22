@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--文件类型-->
 
 <html>
@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
 
     <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
-    <title>壁纸分享 - BitBitcode</title>
+    <title> 【总结】数据类型 - BitBitcode</title>
+    <link rel="icon" href="..\images\Logo.png" type="image/x-icon">
 
 
     <!--调用 CSS 样式文件-->
@@ -18,29 +19,29 @@
 
     <!--调用 JavaScript 文件-->
     <!--注意：“jquery-3.1.1.js”和“semantic.js”的调用顺序不能变！！！-->
-    <script src="..\JavaScript_files\jquery-3.1.1.js"> </script>
-    <script src="..\JavaScript_files\semantic.js"> </script>
+    <script src="..\JavaScript_files\jquery-3.1.1.js"></script>
+    <script src="..\JavaScript_files\semantic.js"></script>
 
 
     <!--含有JavaScript效果组件还需要单独调用-->
     <script>
         $(document)
-            .ready(function () {
-                $('.ui.menu .ui.dropdown')
-                    .dropdown({
-                        on: 'hover'
-                    });
-                $('.ui.menu a.item')
-                    .on('click', function () {
-                        $(this)
-                            .addClass('active')
-                            .siblings()
-                            .removeClass('active')
-                            ;
-                    })
-                    ;
-            })
-            ;
+        .ready(function () {
+        $('.ui.menu .ui.dropdown')
+        .dropdown({
+        on: 'hover'
+        });
+        $('.ui.menu a.item')
+        .on('click', function () {
+        $(this)
+        .addClass('active')
+        .siblings()
+        .removeClass('active')
+        ;
+        })
+        ;
+        })
+        ;
     </script>
 
 
@@ -54,9 +55,9 @@
             margin: 0em 0em;
         }
 
-        .ui.menu:last-child {
-            margin-bottom: 110px;
-        }
+            .ui.menu:last-child {
+                margin-bottom: 110px;
+            }
     </style>
 </head>
 
