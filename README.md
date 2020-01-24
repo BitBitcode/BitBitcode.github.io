@@ -1,11 +1,11 @@
 # BitBitcode 个人网页
 
 ![编写语言](https://img.shields.io/badge/Language-HTML+CSS-0078D7?style=plastic)
-![问题](https://img.shields.io/badge/Issue-0-red)
+![问题](https://img.shields.io/badge/Issue-0-FF0000)
 ![版本](https://img.shields.io/badge/Version-1.1.2-0078D7)
 ![模板](https://img.shields.io/badge/UI-Semantic-lightgrey)
-![开发工具](https://img.shields.io/badge/IDE-Visual_Studio-puple)
-![开源许可](https://img.shields.io/badge/License-MIT-green)
+![开发工具](https://img.shields.io/badge/IDE-Visual_Studio-9153CC)
+![开源许可](https://img.shields.io/badge/License-MIT-lightgreen)
 
 
 ## 关  于
@@ -48,9 +48,9 @@
     + 未完待续。。。
 
   + **开发计划**
-    + 第一阶段：大量利用 `Semantic UI` 提供的已有组件来初步构建静态网页；
+    + 第一阶段：大量利用 Semantic UI 提供的已有组件来初步构建静态网页；
     + 第二阶段：添加文章、内容，形成各个栏目的模板；
-    + 第三阶段：尝试加入动态效果及交互内容，尝试开发自己的 `CSS样式文件`；
+    + 第三阶段：尝试加入动态效果及交互内容，尝试开发自己的 CSS样式文件；
     + 第四阶段：搭建后台，添加评论等博客网站的功能（暂缓）
 
 
