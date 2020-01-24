@@ -1,6 +1,6 @@
 # BitBitcode 个人网页
 ---
-[![编写语言](https://img.shields.io/badge/Language-HTML+CSS-0078D7?style=plastic)]
+![编写语言](https://img.shields.io/badge/Language-HTML+CSS-0078D7?style=plastic)
 [![问题](https://img.shields.io/badge/Issue-0-red)]
 [![版本](https://img.shields.io/badge/Version-1.1.2-0078D7)]
 [![模板](https://img.shields.io/badge/UI-Semantic-lightgrey)]
