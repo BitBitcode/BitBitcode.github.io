@@ -3,7 +3,7 @@
 ![编写语言](https://img.shields.io/badge/Language-HTML+CSS-E02080)
 ![问题](https://img.shields.io/badge/Issue-0/0-FF0000)
 ![版本](https://img.shields.io/badge/Version-1.1.2-0078D7)
-![开发工具](https://img.shields.io/badge/IDE-Visual_Studio-9153CC)
+![开发工具](https://img.shields.io/badge/IDE-Visual_Studio_Code-0066B8)
 ![模板](https://img.shields.io/badge/UI-Semantic-35BDB2)
 ![开源许可](https://img.shields.io/badge/License-MIT-45BF17)
 
