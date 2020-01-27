@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
 
     <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
-    <title>Python内建函数 - BitBitcode</title>
+    <title>浅谈 if 的用法 - BitBitcode</title>
     <!--标题栏图标-->
     <link rel="icon" href="..\images\Logo.png" type="image/x-icon">
     <!--收藏夹图标-->
@@ -109,82 +109,109 @@
 
     <!--正文部分（开始）-->
     <div class="MFD_Light_Content">
-        <div class="ui raised blue segment">
-            <h2> Python内建函数（Built-in Functions） </h2>
-        </div>
-        <div class="part">
-            <table class="ui very basic celled table">
-                <thead>
-                  <tr>
-                    <th>序 号</th>
-                    <th>函数名</th>
-                    <th>返回值</th>
-                    <th>功 能</th>
-                    <th>其 他</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>abs( )</td>
-                    <td>整型、浮点型</td>
-                    <td>求绝对值</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>all( )</td>
-                    <td>iterable</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>any( )</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>8</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+        
+        <!--面包屑导航-->
+        <div style="text-align: left">
+            <div class="ui breadcrumb" >
+                <a class="section">首 页</a>
+                <i class="right chevron icon divider"></i>
+                <a class="section">C/C++</a>
+                <i class="right arrow icon divider"></i>
+                <div class="active section">你现在的位置</div>
+            </div>
         </div>
         
+        <br>
 
+        <div class="ui raised blue segment">
+            <h2>浅谈 if 的用法</h2>
+        </div>
+
+        <div class="part">
+            <p>
+                “if ... else ...”语句是我们遇到最简单的一种程序控制语句。
+                它只有两个分支，所以在实际使用的过程中基本不会有什么问题。
+                但是如果遇到多路分支的时候，如 if ... else if ... else if ... ... else ...
+                如果理解不到位，有时候就会有一点问题了。作者之前就遇到了一些问题，这里整理出来大家一起学习。
+            </p>
+            
+            <h3>1、一个 if 一个 else：</h3>
+            <div class="ui segment">
+                if (条件 1)<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 A</div>
+                }<br>
+                <br>
+                else<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 B</div>
+                }<br>
+                <br>
+                代码块 C         
+            </div>
+            <p>
+                最简单的一种，A或B只会执行一个，然后执行C            
+            </p>
+
+            <h3>2、多个 if  一个 else：</h3>
+            <div class="ui segment">
+                if (条件 1)<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 A</div>
+                }<br>
+                <br>
+                if (条件 2)<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 B</div>
+                }<br>
+                <br>
+                else<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 C</div>
+                }<br>
+                <br>
+                代码块 D        
+            </div>
+            <p>
+                如果条件1满足，则执行A，之后会从第二个if继续执行，因为第二个if和else组成了一个整体，
+                并且由于是第一个if之后的语句，所以不论条件1满不满足，都会执行B或者C的其中之一。 
+                （作者之前就是这里出了问题，以为上面的代码A、B、C中只会执行一个，也的确是一个比较隐蔽的错误。）
+                如果想要实现A、B、C只会执行一个的效果效果，即多分支，则需要if, else if, else if, … else if, else语句。      
+            </p>
+
+            <h3>3、一个 if  若干 else if 一个 else：</h3>
+            <div class="ui segment">
+                if (条件 1)<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 A</div>
+                }<br>
+                <br>
+                else if (条件 2)<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 B</div>
+                }<br>
+                <br>
+                else if (条件 3)<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 C</div>
+                }<br>
+                <br>
+                … …<br>
+                <br>
+                else<br>
+                {<br>
+                    <div style="text-indent: 2em">代码块 Z</div>
+                }<br>
+                <br>
+                代码块 X         
+            </div>
+            <p>
+                在这种结构中，所有的语句都相关联，形成一个整体，
+                实现了多个平行分支效果：A，B，C … Z中只会有一个被执行，然后执行X。
+                不过这种情况下，如果你的条件表达式比较简单，还可以用“switch ... case ...”语句来写
+            </p>
+        </div>
+            
     </div>
     <!--正文部分（结束）-->
 
