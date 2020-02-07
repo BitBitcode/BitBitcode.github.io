@@ -14,7 +14,7 @@
 
     <!--调用 CSS 样式文件-->
     <link href="..\CSS_files\semantic.css" rel="stylesheet" type="text/css">
-    <link href="..\CSS_files\singlepage.css" rel="stylesheet" type="text/css">
+    <link href="..\CSS_files\article.css" rel="stylesheet" type="text/css">
 
 
     <!--调用 JavaScript 文件-->
@@ -71,7 +71,7 @@
         <!--单项菜单-->
         <div class="header item">BitBitcode</div>
         <a class="item" href="..\index.html"> 首 页 </a>
-        <a class="item" href="..\(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+        <a class="active item" href="..\(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
         <a class="item" href="..\(0)Menu_Pages\(2)CMD.html"> CMD </a>
         <a class="item" href="..\(0)Menu_Pages\(3)Python.html"> Python </a>
         <a class="item" href="..\(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
@@ -81,7 +81,7 @@
             更 多
             <i class="dropdown icon"></i>
             <div tabindex="-1" class="menu transition hidden">
-                <a class="active item" href="sentence.html"> 有趣的话 </a>
+                <a class="item" href="sentence.html"> 有趣的话 </a>
                 <a class="item" href="lyric.html"> 歌词分享 </a>
                 <a class="item" href="wallpaper.html"> 壁纸分享 </a>
                 <div class="divider"></div>
@@ -105,7 +105,19 @@
     <!--页眉与导航栏（结束）-->
 
     <!--正文部分（开始）-->
-    <div class="MFD_Light_Content">
+    <div class="MFD_Light_Content" style="padding-left: 25%; padding-right: 5%">
+        <!--侧边二级导航栏-->
+        <div id="sidebar">
+            <h3 style="width: 100%; margin-left: 0; padding: 1em;"> C语言 / C++</h3>
+            <div class="ui secondary vertical pointing menu" style="width: 100%; margin-left: 0; font-size: 1em">
+                <a class="active item" href="#md1"> 前 言 </a>
+                <a class="item" href="#md2"> 上新 / 推荐 </a>
+                <a class="item" href="#md3"> 总结 / 资料 </a>
+                <a class="item" href="#md4"> 项目 / 实例 </a>
+                <a class="item"> 待 续 </a>
+            </div>
+        </div>
+
         <div class="ui raised blue segment">
             <h2>数据类型总结</h2>
         </div>
