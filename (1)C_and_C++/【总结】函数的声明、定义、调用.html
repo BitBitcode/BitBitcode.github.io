@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--文件类型-->
+
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+
+    <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
+    <title>函数的声明、定义、调用 - BitBitcode</title>
+    <!--标题栏图标-->
+    <link rel="icon" href="..\images\Logo.png" type="image/x-icon">
+    <!--收藏夹图标-->
+    <link rel="shortcut icon" href="..\images\Logo.png" type="image/x-icon">
+
+
+    <!--调用 CSS 样式文件-->
+    <link href="..\CSS_files\semantic.css" rel="stylesheet" type="text/css">
+    <link href="..\CSS_files\article.css" rel="stylesheet" type="text/css">
+
+
+    <!--调用 JavaScript 文件-->
+    <!--注意：“jquery-3.1.1.js”和“semantic.js”的调用顺序不能变！！！-->
+    <script src="..\JavaScript_files\jquery-3.1.1.js"> </script>
+    <script src="..\JavaScript_files\semantic.js"> </script>
+
+
+    <!--含有JavaScript效果组件还需要单独调用-->
+    <script>
+        $(document)
+            .ready(function () {
+                $('.ui.menu .ui.dropdown')
+                    .dropdown({
+                        on: 'hover'
+                    });
+                $('.ui.menu a.item')
+                    .on('click', function () {
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active')
+                            ;
+                    })
+                    ;
+            })
+            ;
+    </script>
+
+
+    <!--内部样式定义-->
+    <style>
+        body {
+            padding: 0em;
+        }
+
+        .ui.menu {
+            margin: 0em 0em;
+        }
+
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--全页面背景-->
+    <div class="background"> </div>
+
+
+    <!--页眉与导航栏（开始）-->
+    <div class="ui inverted grey fixed menu" style="padding-right: 10%; padding-left: 10%;">
+        <!--单项菜单-->
+        <div class="header item">BitBitcode</div>
+        <a class="item" href="..\index.html"> 首 页 </a>
+        <a class="active item" href="..\(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+        <a class="item" href="..\(0)Menu_Pages\(2)CMD.html"> CMD </a>
+        <a class="item" href="..\(0)Menu_Pages\(3)Python.html"> Python </a>
+        <a class="item" href="..\(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
+
+        <!--下拉菜单-->
+        <div tabindex="0" class="ui dropdown item">
+            更 多
+            <i class="dropdown icon"></i>
+            <div tabindex="-1" class="menu transition hidden">
+                <a class="item" href="..\(5)Others\sentence.html"> 有趣的话 </a>
+                <a class="item" href="..\(5)Others\lyric.html"> 歌词分享 </a>
+                <a class="item" href="..\(5)Others\wallpaper.html"> 壁纸分享 </a>
+                <div class="divider"></div>
+                <a class="item" href="..\(0)Menu_Pages\(5)Others.html">其 他</a>
+                <div class="divider"></div>
+                <a class="item" href="..\README.md">关于本站</a>
+            </div>
+        </div>
+
+        <!--右边搜索栏和链接-->
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent inverted icon input">
+                    <input type="text" placeholder="搜索功能还未上线">
+                    <button class="ui grey icon button"><i class="search icon"></i></button>
+                </div>
+            </div>
+            <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
+        </div>
+    </div>
+    <!--页眉与导航栏（结束）-->
+
+    <!--正文部分（开始）-->
+    <div class="MFD_Light_Content">
+        
+        <article class='typora-export os-windows' >
+            <div  id='write'  class = 'is-node'><h1><a name="函数的声明定义调用" class="md-header-anchor"></a><span>函数的声明、定义、调用</span></h1><h2><a name="函数的定义" class="md-header-anchor"></a><span>函数的定义</span></h2><h3><a name="定义部分包括" class="md-header-anchor"></a><span>定义部分包括：</span></h3><ul><li><p><strong><span>函数头</span></strong></p><ul><li><span>返回值类型</span></li><li><span>函数名（标识符）</span></li><li><span>参数列表</span></li></ul></li><li><p><strong><span>函数体</span></strong></p><ul><li><span>局部变量声明</span></li><li><span>可执行代码</span></li></ul></li></ul><h3><a name="定义方式" class="md-header-anchor"></a><span>定义方式</span></h3><h4><a name="1）在-c-文件中定义" class="md-header-anchor"></a><span>（1）在 C 文件中定义</span></h4><ul><li><p><strong><span>① 定义在当前 C 文件中：</span></strong></p><ul><li><span>C 文件是编译的最小单位</span></li><li><span>一般定义在当前 C 文件中，即 main( ) 所在的C文件</span></li><li><span>不能嵌套函数定义语句，即定义不能放在函数体中</span></li></ul></li><li><p><strong><span>② 定义在其他C文件中：</span></strong></p><ul><li><span>需要单独包含涉及到的头文件，也就是说即便主函数所在的 C 文件中包含了头文件，在这里仍然是无效的，需要再次加入 #include&lt;XXX.h&gt;</span></li><li><span>C 文件中的函数可以直接调用已经定义的其他函数（不用在此 C 文件中再次定义）</span></li></ul></li></ul><h4><a name="2）在头文件中定义" class="md-header-anchor"></a><span>（2）在头文件中定义</span></h4><ul><li><span>需要单独包含涉及到的头文件，也就是说即便主函数所在的 C 文件中包含了头文件，在这里仍然是无效的，需要再次加入 #include&lt;XXX.h&gt;</span></li><li><span>头文件中的函数</span><strong><span>不能</span></strong><span>直接调用已经定义的其他函数（必须在此头文件中定义）</span></li></ul><p><span> </span></p><h2><a name="函数的声明" class="md-header-anchor"></a><span>函数的声明</span></h2><h3><a name="声明部分包括" class="md-header-anchor"></a><span>声明部分包括：</span></h3><ul><li><span>返回值类型</span></li><li><span>函数名</span></li><li><span>参数列表</span></li><li><strong><span>分号</span></strong></li></ul><h3><a name="声明的要求注意" class="md-header-anchor"></a><span>声明的要求/注意：</span></h3><ul><li><span>当定义部分在调用语句之前的时候，就无需声明；反之，如果定义语句在调用语句后，且没有加声明语句，则可能报错（实测不是每次都报错）。</span></li></ul><h2><a name="函数的调用" class="md-header-anchor"></a><span>函数的调用</span></h2><h3><a name="调用的形式" class="md-header-anchor"></a><span>调用的形式：</span></h3><ul><li><span>函数语句调用，如：</span><code>scanf(&quot;请输入：%f&quot;, &amp;b);</code></li><li><span>函数表达式调用，如：</span><code>a = pow(b);</code></li><li><span>函数参数调用，如：</span><code>printf(&quot;2的平方等于：%f&quot;, sqrt(4));</code></li></ul><h3><a name="调用的要求注意" class="md-header-anchor"></a><span>调用的要求/注意</span></h3><ul><li><span>主函数可以调用</span><em><span>其他函数</span></em><span>（也称“下层函数”），但其他函数不能调用主函数，下层函数可以相互调用</span></li><li><span>定义在其他C文件中的函数</span><strong><span>不需要</span></strong><span>写 “#inclde&quot;XXX.c” 的预处理语句</span></li><li><span>定义在头文件中的函数</span><strong><span>必须</span></strong><span>写 “#inclde&quot;XXX.h” 的预处理语句</span></li></ul></div> 
+        </article>
+
+        
+        <!--右下角落款（开始）-->
+        <div id="information">Kiana &nbsp; 2020.2.8</div>
+        <!--右下角落款（结束）--> 
+    </div>
+    <!--正文部分（结束）-->
+
+    <!--页脚部分（开始）-->
+    <!--还可以借鉴GitHub的页脚：两边写字，中间有图标-->
+    <div class="ui inverted grey vertical four item footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">关 于</h4>
+                    <div class="ui inverted link list">
+                        <a class="item" href="https://github.com/">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
+                        <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
+                        <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">联系作者</h4>
+                    <div class="ui inverted link list">
+                        <a class="item">E-mail: smilewwc@qq.com</a>
+                        <a class="item">Telephone：000000（示例）</a>
+                        <a class="item">邮编：111111（示例）</a>
+                        <a class="item">地址：中国-China</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">版权信息</h4>
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页脚部分（结束）-->
+</body>
+
+</html>

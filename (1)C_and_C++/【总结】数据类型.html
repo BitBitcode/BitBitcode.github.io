@@ -26,22 +26,22 @@
     <!--含有JavaScript效果组件还需要单独调用-->
     <script>
         $(document)
-        .ready(function () {
-        $('.ui.menu .ui.dropdown')
-        .dropdown({
-        on: 'hover'
-        });
-        $('.ui.menu a.item')
-        .on('click', function () {
-        $(this)
-        .addClass('active')
-        .siblings()
-        .removeClass('active')
-        ;
-        })
-        ;
-        })
-        ;
+            .ready(function () {
+                $('.ui.menu .ui.dropdown')
+                    .dropdown({
+                        on: 'hover'
+                    });
+                $('.ui.menu a.item')
+                    .on('click', function () {
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active')
+                            ;
+                    })
+                    ;
+            })
+            ;
     </script>
 
 
@@ -55,9 +55,9 @@
             margin: 0em 0em;
         }
 
-            .ui.menu:last-child {
-                margin-bottom: 110px;
-            }
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
     </style>
 </head>
 
@@ -118,21 +118,22 @@
             </div>
         </div>
 
-        <div class="ui raised blue segment">
-            <h2>数据类型总结</h2>
+        <div class="ui raised blue segment" style="text-align: center;">
+            <h1>【总结】数据类型</h1>
         </div>
         <div class="part">
-            <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
-                xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
-                xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
-            
-            <head>
-                <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-                <meta name=ProgId content=Word.Document>
-                <meta name=Generator content="Microsoft Word 15">
-                <meta name=Originator content="Microsoft Word 15">
-                <link rel=File-List href="整型变量（UTF-8）.files/filelist.xml">
-                <!--[if gte mso 9]><xml>
+            <article>
+                <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
+                    xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+                    xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+
+                <head>
+                    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+                    <meta name=ProgId content=Word.Document>
+                    <meta name=Generator content="Microsoft Word 15">
+                    <meta name=Originator content="Microsoft Word 15">
+                    <link rel=File-List href="整型变量（UTF-8）.files/filelist.xml">
+                    <!--[if gte mso 9]><xml>
              <o:DocumentProperties>
               <o:Author>Kiana Kaslana</o:Author>
               <o:LastAuthor>Kiana Kaslana</o:LastAuthor>
@@ -152,9 +153,9 @@
               <o:AllowPNG/>
              </o:OfficeDocumentSettings>
             </xml><![endif]-->
-                <link rel=themeData href="整型变量（UTF-8）.files/themedata.thmx">
-                <link rel=colorSchemeMapping href="整型变量（UTF-8）.files/colorschememapping.xml">
-                <!--[if gte mso 9]><xml>
+                    <link rel=themeData href="整型变量（UTF-8）.files/themedata.thmx">
+                    <link rel=colorSchemeMapping href="整型变量（UTF-8）.files/colorschememapping.xml">
+                    <!--[if gte mso 9]><xml>
              <w:WordDocument>
               <w:SpellingState>Clean</w:SpellingState>
               <w:GrammarState>Clean</w:GrammarState>
@@ -205,7 +206,7 @@
                <m:naryLim m:val="undOvr"/>
               </m:mathPr></w:WordDocument>
             </xml><![endif]-->
-                <!--[if gte mso 9]><xml>
+                    <!--[if gte mso 9]><xml>
              <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
               DefSemiHidden="false" DefQFormat="false" DefPriority="99"
               LatentStyleCount="376">
@@ -785,437 +786,437 @@
                Name="Smart Link"/>
              </w:LatentStyles>
             </xml><![endif]-->
-                <style>
-                    <!--
-                    /* Font Definitions */
-                    @font-face {
-                        font-family: 宋体;
-                        panose-1: 2 1 6 0 3 1 1 1 1 1;
-                        mso-font-alt: SimSun;
-                        mso-font-charset: 134;
-                        mso-generic-font-family: auto;
-                        mso-font-pitch: variable;
-                        mso-font-signature: 3 680460288 22 0 262145 0;
-                    }
-            
-                    @font-face {
-                        font-family: "Cambria Math";
-                        panose-1: 2 4 5 3 5 4 6 3 2 4;
-                        mso-font-charset: 0;
-                        mso-generic-font-family: roman;
-                        mso-font-pitch: variable;
-                        mso-font-signature: 3 0 0 0 1 0;
-                    }
-            
-                    @font-face {
-                        font-family: 等线;
-                        panose-1: 2 1 6 0 3 1 1 1 1 1;
-                        mso-font-alt: DengXian;
-                        mso-font-charset: 134;
-                        mso-generic-font-family: auto;
-                        mso-font-pitch: variable;
-                        mso-font-signature: -1610612033 953122042 22 0 262159 0;
-                    }
-            
-                    @font-face {
-                        font-family: Calibri;
-                        panose-1: 2 15 5 2 2 2 4 3 2 4;
-                        mso-font-charset: 0;
-                        mso-generic-font-family: swiss;
-                        mso-font-pitch: variable;
-                        mso-font-signature: -536859905 1073786111 1 0 511 0;
-                    }
-            
-                    @font-face {
-                        font-family: 微软雅黑;
-                        panose-1: 2 11 5 3 2 2 4 2 2 4;
-                        mso-font-charset: 134;
-                        mso-generic-font-family: swiss;
-                        mso-font-pitch: variable;
-                        mso-font-signature: -2147483001 718224464 22 0 262175 0;
-                    }
-            
-                    @font-face {
-                        font-family: "\@微软雅黑";
-                        mso-font-charset: 134;
-                        mso-generic-font-family: swiss;
-                        mso-font-pitch: variable;
-                        mso-font-signature: -2147483001 718224464 22 0 262175 0;
-                    }
-            
-                    @font-face {
-                        font-family: "\@宋体";
-                        panose-1: 2 1 6 0 3 1 1 1 1 1;
-                        mso-font-charset: 134;
-                        mso-generic-font-family: auto;
-                        mso-font-pitch: variable;
-                        mso-font-signature: 3 680460288 22 0 262145 0;
-                    }
-            
-                    @font-face {
-                        font-family: "\@等线";
-                        panose-1: 2 1 6 0 3 1 1 1 1 1;
-                        mso-font-charset: 134;
-                        mso-generic-font-family: auto;
-                        mso-font-pitch: variable;
-                        mso-font-signature: -1610612033 953122042 22 0 262159 0;
-                    }
-            
-                    /* Style Definitions */
-                    p.MsoNormal,
-                    li.MsoNormal,
-                    div.MsoNormal {
-                        mso-style-unhide: no;
-                        mso-style-qformat: yes;
-                        mso-style-parent: "";
-                        margin: 0cm;
-                        margin-bottom: .0001pt;
-                        text-align: justify;
-                        text-justify: inter-ideograph;
-                        mso-pagination: none;
-                        font-size: 10.5pt;
-                        mso-bidi-font-size: 11.0pt;
-                        font-family: 等线;
-                        mso-ascii-font-family: 等线;
-                        mso-ascii-theme-font: minor-latin;
-                        mso-fareast-font-family: 等线;
-                        mso-fareast-theme-font: minor-fareast;
-                        mso-hansi-font-family: 等线;
-                        mso-hansi-theme-font: minor-latin;
-                        mso-bidi-font-family: "Times New Roman";
-                        mso-bidi-theme-font: minor-bidi;
-                        mso-font-kerning: 1.0pt;
-                    }
-            
-                    span.GramE {
-                        mso-style-name: "";
-                        mso-gram-e: yes;
-                    }
-            
-                    .MsoChpDefault {
-                        mso-style-type: export-only;
-                        mso-default-props: yes;
-                        font-family: 等线;
-                        mso-bidi-font-family: "Times New Roman";
-                        mso-bidi-theme-font: minor-bidi;
-                    }
-            
-                    /* Page Definitions */
-                    @page {
-                        mso-page-border-surround-header: no;
-                        mso-page-border-surround-footer: no;
-                    }
-            
-                    @page WordSection1 {
-                        size: 595.3pt 841.9pt;
-                        margin: 36.0pt 36.0pt 36.0pt 36.0pt;
-                        mso-header-margin: 42.55pt;
-                        mso-footer-margin: 49.6pt;
-                        mso-paper-source: 0;
-                        layout-grid: 15.6pt;
-                    }
-            
-                    div.WordSection1 {
-                        page: WordSection1;
-                    }
-            
-                    /* List Definitions */
-                    @list l0 {
-                        mso-list-id: 402870764;
-                        mso-list-template-ids: 664296784;
-                    }
-            
-                    @list l0:level1 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 36.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level2 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 72.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level3 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 108.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level4 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 144.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level5 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 180.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level6 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 216.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level7 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 252.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level8 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 288.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l0:level9 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 324.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1 {
-                        mso-list-id: 622689125;
-                        mso-list-template-ids: 1219115438;
-                    }
-            
-                    @list l1:level1 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 36.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level2 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 72.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level3 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 108.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level4 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 144.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level5 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 180.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level6 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 216.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level7 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 252.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level8 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 288.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l1:level9 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 324.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2 {
-                        mso-list-id: 974943873;
-                        mso-list-template-ids: 646484098;
-                    }
-            
-                    @list l2:level1 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 36.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level2 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: o;
-                        mso-level-tab-stop: 72.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: "Courier New";
-                        mso-bidi-font-family: "Times New Roman";
-                    }
-            
-                    @list l2:level3 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 108.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level4 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 144.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level5 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 180.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level6 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 216.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level7 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 252.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level8 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 288.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    @list l2:level9 {
-                        mso-level-number-format: bullet;
-                        mso-level-text: ;
-                        mso-level-tab-stop: 324.0pt;
-                        mso-level-number-position: left;
-                        text-indent: -18.0pt;
-                        mso-ansi-font-size: 10.0pt;
-                        font-family: Symbol;
-                    }
-            
-                    ol {
-                        margin-bottom: 0cm;
-                    }
-            
-                    ul {
-                        margin-bottom: 0cm;
-                    }
-                    -->
-                </style>
-                <!--[if gte mso 10]>
+                    <style>
+                        <!--
+                        /* Font Definitions */
+                        @font-face {
+                            font-family: 宋体;
+                            panose-1: 2 1 6 0 3 1 1 1 1 1;
+                            mso-font-alt: SimSun;
+                            mso-font-charset: 134;
+                            mso-generic-font-family: auto;
+                            mso-font-pitch: variable;
+                            mso-font-signature: 3 680460288 22 0 262145 0;
+                        }
+
+                        @font-face {
+                            font-family: "Cambria Math";
+                            panose-1: 2 4 5 3 5 4 6 3 2 4;
+                            mso-font-charset: 0;
+                            mso-generic-font-family: roman;
+                            mso-font-pitch: variable;
+                            mso-font-signature: 3 0 0 0 1 0;
+                        }
+
+                        @font-face {
+                            font-family: 等线;
+                            panose-1: 2 1 6 0 3 1 1 1 1 1;
+                            mso-font-alt: DengXian;
+                            mso-font-charset: 134;
+                            mso-generic-font-family: auto;
+                            mso-font-pitch: variable;
+                            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+                        }
+
+                        @font-face {
+                            font-family: Calibri;
+                            panose-1: 2 15 5 2 2 2 4 3 2 4;
+                            mso-font-charset: 0;
+                            mso-generic-font-family: swiss;
+                            mso-font-pitch: variable;
+                            mso-font-signature: -536859905 1073786111 1 0 511 0;
+                        }
+
+                        @font-face {
+                            font-family: 微软雅黑;
+                            panose-1: 2 11 5 3 2 2 4 2 2 4;
+                            mso-font-charset: 134;
+                            mso-generic-font-family: swiss;
+                            mso-font-pitch: variable;
+                            mso-font-signature: -2147483001 718224464 22 0 262175 0;
+                        }
+
+                        @font-face {
+                            font-family: "\@微软雅黑";
+                            mso-font-charset: 134;
+                            mso-generic-font-family: swiss;
+                            mso-font-pitch: variable;
+                            mso-font-signature: -2147483001 718224464 22 0 262175 0;
+                        }
+
+                        @font-face {
+                            font-family: "\@宋体";
+                            panose-1: 2 1 6 0 3 1 1 1 1 1;
+                            mso-font-charset: 134;
+                            mso-generic-font-family: auto;
+                            mso-font-pitch: variable;
+                            mso-font-signature: 3 680460288 22 0 262145 0;
+                        }
+
+                        @font-face {
+                            font-family: "\@等线";
+                            panose-1: 2 1 6 0 3 1 1 1 1 1;
+                            mso-font-charset: 134;
+                            mso-generic-font-family: auto;
+                            mso-font-pitch: variable;
+                            mso-font-signature: -1610612033 953122042 22 0 262159 0;
+                        }
+
+                        /* Style Definitions */
+                        p.MsoNormal,
+                        li.MsoNormal,
+                        div.MsoNormal {
+                            mso-style-unhide: no;
+                            mso-style-qformat: yes;
+                            mso-style-parent: "";
+                            margin: 0cm;
+                            margin-bottom: .0001pt;
+                            text-align: justify;
+                            text-justify: inter-ideograph;
+                            mso-pagination: none;
+                            font-size: 10.5pt;
+                            mso-bidi-font-size: 11.0pt;
+                            font-family: 等线;
+                            mso-ascii-font-family: 等线;
+                            mso-ascii-theme-font: minor-latin;
+                            mso-fareast-font-family: 等线;
+                            mso-fareast-theme-font: minor-fareast;
+                            mso-hansi-font-family: 等线;
+                            mso-hansi-theme-font: minor-latin;
+                            mso-bidi-font-family: "Times New Roman";
+                            mso-bidi-theme-font: minor-bidi;
+                            mso-font-kerning: 1.0pt;
+                        }
+
+                        span.GramE {
+                            mso-style-name: "";
+                            mso-gram-e: yes;
+                        }
+
+                        .MsoChpDefault {
+                            mso-style-type: export-only;
+                            mso-default-props: yes;
+                            font-family: 等线;
+                            mso-bidi-font-family: "Times New Roman";
+                            mso-bidi-theme-font: minor-bidi;
+                        }
+
+                        /* Page Definitions */
+                        @page {
+                            mso-page-border-surround-header: no;
+                            mso-page-border-surround-footer: no;
+                        }
+
+                        @page WordSection1 {
+                            size: 595.3pt 841.9pt;
+                            margin: 36.0pt 36.0pt 36.0pt 36.0pt;
+                            mso-header-margin: 42.55pt;
+                            mso-footer-margin: 49.6pt;
+                            mso-paper-source: 0;
+                            layout-grid: 15.6pt;
+                        }
+
+                        div.WordSection1 {
+                            page: WordSection1;
+                        }
+
+                        /* List Definitions */
+                        @list l0 {
+                            mso-list-id: 402870764;
+                            mso-list-template-ids: 664296784;
+                        }
+
+                        @list l0:level1 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 36.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level2 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 72.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level3 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 108.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level4 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 144.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level5 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 180.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level6 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 216.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level7 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 252.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level8 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 288.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l0:level9 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 324.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1 {
+                            mso-list-id: 622689125;
+                            mso-list-template-ids: 1219115438;
+                        }
+
+                        @list l1:level1 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 36.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level2 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 72.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level3 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 108.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level4 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 144.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level5 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 180.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level6 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 216.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level7 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 252.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level8 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 288.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l1:level9 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 324.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2 {
+                            mso-list-id: 974943873;
+                            mso-list-template-ids: 646484098;
+                        }
+
+                        @list l2:level1 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 36.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level2 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: o;
+                            mso-level-tab-stop: 72.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: "Courier New";
+                            mso-bidi-font-family: "Times New Roman";
+                        }
+
+                        @list l2:level3 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 108.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level4 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 144.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level5 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 180.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level6 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 216.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level7 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 252.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level8 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 288.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        @list l2:level9 {
+                            mso-level-number-format: bullet;
+                            mso-level-text: ;
+                            mso-level-tab-stop: 324.0pt;
+                            mso-level-number-position: left;
+                            text-indent: -18.0pt;
+                            mso-ansi-font-size: 10.0pt;
+                            font-family: Symbol;
+                        }
+
+                        ol {
+                            margin-bottom: 0cm;
+                        }
+
+                        ul {
+                            margin-bottom: 0cm;
+                        }
+                        -->
+                    </style>
+                    <!--[if gte mso 10]>
             <style>
              /* Style Definitions */
              table.MsoNormalTable
@@ -1241,35 +1242,36 @@
             	mso-font-kerning:1.0pt;}
             </style>
             <![endif]-->
-                <!--[if gte mso 9]><xml>
+                    <!--[if gte mso 9]><xml>
              <o:shapedefaults v:ext="edit" spidmax="1026"/>
             </xml><![endif]-->
-                <!--[if gte mso 9]><xml>
+                    <!--[if gte mso 9]><xml>
              <o:shapelayout v:ext="edit">
               <o:idmap v:ext="edit" data="1"/>
              </o:shapelayout></xml><![endif]-->
-            </head>
-            
-            <body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
-            
-                <div class=WordSection1 style='layout-grid:15.6pt'>
-            
-                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+                </head>
+
+                <body lang=ZH-CN style='tab-interval:21.0pt;text-justify-trim:punctuation'>
+
+                    <div class=WordSection1 style='layout-grid:15.6pt'>
+
+                        <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
             mso-outline-level:1'><b><span style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>整型变量<span lang=EN-US>
-                                    <o:p></o:p>
-                                </span></span></b></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                                        <o:p></o:p>
+                                    </span></span></b></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>短整型（<span lang=EN-US>2B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>短整型（<span lang=EN-US>2B</span></span><span
+                                lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
             微软雅黑;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:
             11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:微软雅黑;
@@ -1277,41 +1279,43 @@
             宋体;color:black;mso-font-kerning:0pt'>16bit</span><span style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
             0pt'>）<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号短整型：<span lang=EN-US>[signed]&nbsp;<b>short</b>&nbsp;[int]
-                                <o:p></o:p></span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号短整型：<span
+                                    lang=EN-US>[signed]&nbsp;<b>short</b>&nbsp;[int]
+                                    <o:p></o:p></span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号短整型：<b><span lang=EN-US>unsigned short</span></b><span
-                                lang=EN-US>&nbsp;[int]<o:p></o:p></span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号短整型：<b><span lang=EN-US>unsigned
+                                        short</span></b><span lang=EN-US>&nbsp;[int]<o:p></o:p></span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>基本整型（<span lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>基本整型（<span lang=EN-US>4B</span></span><span
+                                lang=EN-US style='font-size:11.0pt;font-family:
             "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;
             mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
@@ -1320,44 +1324,45 @@
             X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>32bit</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>）<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号基本整型：<span lang=EN-US>[signed] <b>int</b>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号基本整型：<b><span lang=EN-US>unsigned int</span></b><span
-                                lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号基本整型：<b><span lang=EN-US>unsigned
+                                        int</span></b><span lang=EN-US>
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>长整型（<span lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>长整型（<span lang=EN-US>4B</span></span><span
+                                lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:
             11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
@@ -1365,84 +1370,86 @@
             宋体;color:black;mso-font-kerning:0pt'>32bit</span><span style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
             0pt'>）<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号长整型：<span lang=EN-US>[signed] <b>long</b>&nbsp;[int]<o:p>
-                                </o:p></span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>有符号长整型：<span lang=EN-US>[signed]
+                                    <b>long</b>&nbsp;[int]<o:p>
+                                    </o:p></span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号长整型：<b><span lang=EN-US>unsigned long</span></b><span
-                                lang=EN-US>&nbsp;[int]<o:p></o:p></span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>无符号长整型：<b><span lang=EN-US>unsigned
+                                        long</span></b><span lang=EN-US>&nbsp;[int]<o:p></o:p></span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level1 lfo1;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>注意：<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:54.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l2 level2 lfo1;tab-stops:list 72.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
-            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span style='mso-list:Ignore'>o<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span
-                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:"Courier New";
+            mso-fareast-font-family:"Courier New";color:black;mso-font-kerning:0pt'><span
+                                    style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span
+                                style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>整型变量的溢出：如果变量的数值超过该类型变量的最大范围，则发生数据溢出，但程序不会报错！！所以要十分小心此类错误。<span
-                                lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+                                    lang=EN-US>
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
             mso-outline-level:1'><b><span lang=EN-US style='font-size:11.0pt;font-family:
-            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:18.0pt'>&nbsp;<o:p></o:p></span></b></p>
-            
-                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:18.0pt'>&nbsp;<o:p></o:p></span></b>
+                        </p>
+
+                        <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
             mso-outline-level:1'><span class=GramE><b><span style='font-size:16.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:
             18.0pt'>实型变量</span></b></span><b><span lang=EN-US style='font-size:16.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:
             18.0pt'>
-                                <o:p></o:p>
-                            </span></b></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></b></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l1 level1 lfo2;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span class=GramE><span style='font-size:11.0pt;
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span class=GramE><span style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
             0pt'>单精度实型变量</span></span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>：<span lang=EN-US>float</span>（<span
-                                lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+                                    lang=EN-US>4B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
             "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;
             mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
@@ -1451,22 +1458,22 @@
             X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>32bit</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>）<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l1 level1 lfo2;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span class=GramE><span style='font-size:11.0pt;
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span class=GramE><span style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
             0pt'>双精度实型变量</span></span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>：<span lang=EN-US>double</span>（<span
-                                lang=EN-US>8B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
+                                    lang=EN-US>8B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
             "Calibri",sans-serif;mso-fareast-font-family:微软雅黑;color:black;mso-font-kerning:
             0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
@@ -1475,20 +1482,21 @@
             X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>64bit</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>）<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l1 level1 lfo2;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
-            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>长<span class=GramE>精度实型变量</span>：<span lang=EN-US>long
-                                double</span>（<span lang=EN-US>8B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+            mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>长<span class=GramE>精度实型变量</span>：<span
+                                    lang=EN-US>long
+                                    double</span>（<span lang=EN-US>8B</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
             微软雅黑;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:
             11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:微软雅黑;
@@ -1496,161 +1504,174 @@
             宋体;color:black;mso-font-kerning:0pt'>64bit</span><span style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
             0pt'>）<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
             mso-outline-level:1'><b><span lang=EN-US style='font-size:11.0pt;font-family:
-            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:18.0pt'>&nbsp;<o:p></o:p></span></b></p>
-            
-                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:18.0pt'>&nbsp;<o:p></o:p></span></b>
+                        </p>
+
+                        <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
             mso-outline-level:1'><b><span style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>字符型变量<span lang=EN-US>
-                                    <o:p></o:p>
-                                </span></span></b></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                                        <o:p></o:p>
+                                    </span></span></b></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l0 level1 lfo3;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span lang=EN-US style='font-size:11.0pt;
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span lang=EN-US style='font-size:11.0pt;
             font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
             0pt'>char<o:p></o:p></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             text-indent:-18.0pt;line-height:18.0pt;mso-pagination:widow-orphan;mso-list:
             l0 level1 lfo3;tab-stops:list 36.0pt;vertical-align:middle'>
-                        <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
+                            <![if !supportLists]><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:11.0pt;font-family:Symbol;
             mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
             mso-font-kerning:0pt'><span style='mso-list:Ignore'>·<span
-                                    style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span>
-                        <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                                        style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span></span></span>
+                            <![endif]><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
             mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>实质存储的是<span
-                                lang=EN-US>ASCLL</span>码，所以字符变量可以和整型数据通用，还可以和整型数据运算<span lang=EN-US>
-                                <o:p></o:p>
-                            </span></span></p>
-            
-                    <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
+                                    lang=EN-US>ASCLL</span>码，所以字符变量可以和整型数据通用，还可以和整型数据运算<span lang=EN-US>
+                                    <o:p></o:p>
+                                </span></span></p>
+
+                        <p class=MsoNormal align=left style='margin-left:27.0pt;text-align:left;
             line-height:18.0pt;mso-pagination:widow-orphan;vertical-align:middle'><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:black;mso-font-kerning:0pt'>
-                            <o:p>&nbsp;</o:p>
-                        </span></p>
-            
-                    <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
+                                <o:p>&nbsp;</o:p>
+                            </span></p>
+
+                        <p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
             mso-outline-level:1'><b><span lang=EN-US style='font-size:16.0pt;font-family:
-            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>&nbsp;</span></b><b><span style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+            "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:#1E4E79;mso-font-kerning:18.0pt'>&nbsp;</span></b><b><span
+                                    style='font-size:16.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
             宋体;color:#1E4E79;mso-font-kerning:18.0pt'>各种数据类型总结<span lang=EN-US>
-                                    <o:p></o:p>
-                                </span></span></b></p>
-            
-                    <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 title="" summary="" style='border-collapse:collapse;border:none;mso-border-alt:solid #A3A3A3 1.0pt;
-             mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
-                        <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
-              background:#0070C0;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:white;mso-font-kerning:0pt'>类<span lang=EN-US><span style='mso-spacerun:yes'> 
-                                                </span></span>型</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:white;mso-font-kerning:0pt'>
                                         <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border:solid #A3A3A3 1.0pt;
+                                    </span></span></b></p>
+
+                        <table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 title="" summary="" style='border-collapse:collapse;border:none;mso-border-alt:solid #A3A3A3 1.0pt;
+             mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm'>
+                            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+              background:#0070C0;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>类<span lang=EN-US><span style='mso-spacerun:yes'> 
+                                                    </span></span>型</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:white;mso-font-kerning:0pt'>
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border:solid #A3A3A3 1.0pt;
               border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>子类型</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border:solid #A3A3A3 1.0pt;
               border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>关键字</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border:solid #A3A3A3 1.0pt;
               border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>占用空间</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border:solid #A3A3A3 1.0pt;
               border-left:none;mso-border-left-alt:solid #A3A3A3 1.0pt;background:#0070C0;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>取值范围</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:white;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:1'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:1'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>有符号 短整型<span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>有符号 短整型<span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>[signed]&nbsp;<b>short</b>&nbsp;[int]<o:p></o:p></span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>2B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>16bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
               mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[-32768 , 32,767</span><span lang=X-NONE style='font-size:11.0pt;
               font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
@@ -1658,60 +1679,66 @@
               11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
               mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:2'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:2'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>无符号 短整型<span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=166 valign=top style='width:124.5pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>无符号 短整型<span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=166 valign=top style='width:124.5pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>unsigned short</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>&nbsp;[int]<o:p></o:p></span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>2B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>16bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
               mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[0 , </span><span lang=EN-US style='font-size:11.0pt;font-family:
               "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
@@ -1719,60 +1746,67 @@
               font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:
               windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:3'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:3'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>整型</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>有符号 基本整型<span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>有符号 基本整型<span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>[signed] <b>int</b>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
               mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=218 valign=top style='width:163.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=218 valign=top style='width:163.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
@@ -1780,61 +1814,68 @@
               "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
               mso-font-kerning:0pt;mso-ansi-language:X-NONE'> , 2147483647]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:4'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:4'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>变量</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>无符号 基本整型<span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>无符号 基本整型<span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>unsigned int</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
               mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[0 , </span><span lang=EN-US style='font-size:11.0pt;font-family:
               "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
@@ -1842,59 +1883,65 @@
               11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
               mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:5'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:5'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>有符号 长整型<span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>有符号 长整型<span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>[signed] <b>long</b>&nbsp;[int]<o:p></o:p></span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
               mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=218 valign=top style='width:163.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=218 valign=top style='width:163.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#9CC3E5;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
@@ -1902,60 +1949,66 @@
               "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
               mso-font-kerning:0pt;mso-ansi-language:X-NONE'> , 2147483647]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:6'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:6'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#9CC3E5;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>无符号 长整型<span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>无符号 长整型<span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>unsigned long</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>&nbsp;[int]<o:p></o:p></span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-fareast-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>32bit</span><span lang=EN-US style='font-size:11.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
               mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#DEEBF6;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[0 , </span><span lang=EN-US style='font-size:11.0pt;font-family:
               "微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;
@@ -1963,131 +2016,141 @@
               11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
               mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:7'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:7'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#A8D08D;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>单精度实型变量</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>float</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>4B</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>32bit<o:p></o:p></span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[-3.4</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
               0pt'>×</span><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
-              0pt;mso-ansi-language:X-NONE'>10<sup>-38</sup> ,<span style='mso-spacerun:yes'>  </span></span><span lang=EN-US
-                                        style='font-size:
+              0pt;mso-ansi-language:X-NONE'>10<sup>-38</sup> ,<span style='mso-spacerun:yes'>  </span></span><span
+                                            lang=EN-US style='font-size:
               11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
               mso-color-alt:windowtext;mso-font-kerning:0pt'>3.4</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>×<span lang=EN-US>10<sup>38</sup></span></span><span
-                                        lang=X-NONE style='font-size:
+              宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>×<span
+                                                lang=EN-US>10<sup>38</sup></span></span><span lang=X-NONE style='font-size:
               11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:宋体;color:black;
               mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:8'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:8'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#A8D08D;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
               0pt'>实型变量</span></span><span lang=EN-US style='font-size:11.0pt;font-family:
               "微软雅黑",sans-serif;mso-bidi-font-family:宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span class=GramE><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt'>双精度实型变量</span></span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>double</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>8B</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>64bit<o:p></o:p></span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#E2EFD9;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[-1.7</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
@@ -2107,59 +2170,65 @@
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:9'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:9'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#A8D08D;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>&nbsp;</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
-              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
-              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
-              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
-              宋体;color:black;mso-font-kerning:0pt'>长<span class=GramE>精度实型变量</span><span lang=EN-US>
                                             <o:p></o:p>
-                                        </span></span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+              宋体;color:black;mso-font-kerning:0pt'>长<span class=GramE>精度实型变量</span><span lang=EN-US>
+                                                <o:p></o:p>
+                                            </span></span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+              none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
+              mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
+              background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>long double</span></b><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>8B</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>=</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'> </span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt'>64bit<o:p></o:p></span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#A8D08D;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>[-1.7</span><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:
@@ -2179,75 +2248,86 @@
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>]</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                        <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
-                            <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                            <tr style='mso-yfti-irow:10;mso-yfti-lastrow:yes'>
+                                <td width=105 valign=top style='width:78.4pt;border:solid #A3A3A3 1.0pt;
               border-top:none;mso-border-top-alt:solid #A3A3A3 1.0pt;background:#F1937A;
               padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>字符型变量</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=150 valign=top style='width:112.55pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'>N/A</span><span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;mso-font-kerning:0pt'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=164 valign=top style='width:123.05pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><b><span
-                                            lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <b><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>char</span></b><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                            <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                                <td width=109 valign=top style='width:81.8pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>1B = 8 bit<o:p></o:p></span></p>
-                            </td>
-                            <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
+                                </td>
+                                <td width=212 valign=top style='width:158.7pt;border-top:none;border-left:
               none;border-bottom:solid #A3A3A3 1.0pt;border-right:solid #A3A3A3 1.0pt;
               mso-border-top-alt:solid #A3A3A3 1.0pt;mso-border-left-alt:solid #A3A3A3 1.0pt;
               background:#F1937A;padding:4.0pt 4.0pt 4.0pt 4.0pt'>
-                                <p class=MsoNormal align=center style='text-align:center;mso-pagination:widow-orphan'><span
-                                        lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
+                                    <p class=MsoNormal align=center
+                                        style='text-align:center;mso-pagination:widow-orphan'>
+                                        <span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;mso-bidi-font-family:
               宋体;color:black;mso-color-alt:windowtext;mso-font-kerning:0pt;mso-ansi-language:
               X-NONE'>N/A</span><span lang=X-NONE style='font-size:11.0pt;font-family:"微软雅黑",sans-serif;
               mso-bidi-font-family:宋体;mso-font-kerning:0pt;mso-ansi-language:X-NONE'>
-                                        <o:p></o:p>
-                                    </span></p>
-                            </td>
-                        </tr>
-                    </table>
-            
-                    <p class=MsoNormal><span lang=EN-US>
-                            <o:p>&nbsp;</o:p>
-                        </span></p>
-            
-                </div>
-            
-            </body>
-            
-            </html>
+                                            <o:p></o:p>
+                                        </span></p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <p class=MsoNormal><span lang=EN-US>
+                                <o:p>&nbsp;</o:p>
+                            </span></p>
+
+                    </div>
+
+                </body>
+
+                </html>
+            </article>
         </div>
+
+        <!--右下角落款（开始）-->
+        <div id="information">Kiana &nbsp; 2020.2.8</div>
+        <!--右下角落款（结束）-->
     </div>
     <!--正文部分（结束）-->
 

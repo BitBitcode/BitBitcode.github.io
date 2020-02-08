@@ -113,9 +113,38 @@
 }
 
 
+/*规定文章右下角落款的样式*/
+#information{
+    text-indent: 0em;
+
+    padding-top: 0%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 0%;
+
+    text-align: right;
+    letter-spacing: 2px;
+}
 
 
-/*Markdown编辑器：VUE主题*/
+/*规定所有段落的样式*/
+p { 
+    text-indent: 0em;
+    background: transparent;        /*此项设置相当于文字底纹（当前是透明）*/
+    line-height: 200%;
+  }
+
+
+/*由于导出的HTML用<span>标签编写各段落的文本（而不是<p>标签），所以用以下手动代码规定一下行间距*/
+span { 
+    text-indent: 0em;
+    line-height: 200%;
+  }
+
+
+
+
+/*Typora编辑器（Markdown）：VUE主题*/
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
