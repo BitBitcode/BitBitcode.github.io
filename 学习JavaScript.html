@@ -1,0 +1,30 @@
+<form id="test-form">
+    <input type="text" name="test">
+    <button type="button" onclick="doSubmitForm()">Submit</button>
+    <input type="radio">
+    <input type="checkbox">
+</form>
+
+<script>
+    function doSubmitForm() 
+    {
+        var form = document.getElementById('test-form');
+        // 可以在此修改form的input...
+        // 提交form:
+        // form.submit();
+        alert("是否提交？");
+        var x = 3;
+        alert("输入了：" + x + form.value);
+    }
+</script>
+
+<form>
+    <input type="text" id="email">
+
+</form>
+
+
+<script>
+    var input = document.getElementById('email');
+    input.value = 'test@example.com'; // 文本框的内容已更新
+</script>

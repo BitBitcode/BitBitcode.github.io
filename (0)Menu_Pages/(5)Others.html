@@ -48,6 +48,18 @@
     </script>
 
 
+    <script>
+        alert("加载正常！");
+
+        // function doSubmit()
+        // {
+        //     alert("是否提交？");
+        //     var x = document.getElementById("searchbox");
+        //     alert("输入了：" + x.Value);
+        // }
+    </script>
+
+
     <!--内部样式定义-->
     <style>
         body {
@@ -98,8 +110,9 @@
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent inverted icon input">
-                    <input type="text" placeholder="搜索功能还未上线">
-                    <button class="ui grey icon button"><i class="search icon"></i></button>
+                    <input type="text" placeholder="搜索功能还未上线" id="searchbox">
+                    
+                    <button class="ui grey icon button" onclick="doSubmit()"><i class="search icon"></i></button>
                 </div>
             </div>
             <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
@@ -137,6 +150,26 @@
                     于是恢复了最开始打算的布局，这个页面也就没有用了，但是做都做了，不如把它留下来，写点开发历程、打打草稿之类的。
                 </p>
             </div>
+
+
+            <form id="test-form">
+                <input type="text" name="test">
+                <button type="button" onclick="doSubmitForm()">Submit</button>
+            </form>
+            
+            <script>
+                function doSubmitForm() 
+                {
+                    var form = document.getElementById('test-form');
+                    // 可以在此修改form的input...
+                    // 提交form:
+                    // form.submit();
+                    alert("是否提交？");
+                    var x = 3;
+                    alert("输入了：" + x + form.value);
+                }
+            </script>
+
 
             <div class="part" id="md2">
                 <h1 class="ui dividing header"> 开发历程 </h1>
