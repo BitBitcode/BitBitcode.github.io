@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--文件类型-->
+
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="UTF-8">
+
+    <!--网页标题（显示在浏览器标题栏中改网页的标签页）-->
+    <title>学习 JavaScript - BitBitcode</title>
+    <!--标题栏图标-->
+    <link rel="icon" href="..\images\Logo.png" type="image/x-icon">
+    <!--收藏夹图标-->
+    <link rel="shortcut icon" href="..\images\Logo.png" type="image/x-icon">
+
+
+    <!--调用 CSS 样式文件-->
+    <link href="..\CSS_files\semantic.css" rel="stylesheet" type="text/css">
+    <link href="..\CSS_files\singlepage.css" rel="stylesheet" type="text/css">
+    <!--   
+    <link href="..\CSS_files\vue.css" rel="stylesheet" type="text/css"> -->
+
+
+
+    <!--调用 JavaScript 文件-->
+    <!--注意：“jquery-3.1.1.js”和“semantic.js”的调用顺序不能变！！！-->
+    <script src="..\JavaScript_files\jquery-3.1.1.js"> </script>
+    <script src="..\JavaScript_files\semantic.js"> </script>
+
+
+    <!--含有JavaScript效果组件还需要单独调用-->
+    <script>
+        $(document)
+            .ready(function () {
+                $('.ui.menu .ui.dropdown')
+                    .dropdown({
+                        on: 'hover'
+                    });
+                $('.ui.menu a.item')
+                    .on('click', function () {
+                        $(this)
+                            .addClass('active')
+                            .siblings()
+                            .removeClass('active')
+                            ;
+                    })
+                    ;
+            })
+            ;
+    </script>
+
+
+    <!--内部样式定义-->
+    <style>
+        body {
+            padding: 0em;
+        }
+
+        .ui.menu {
+            margin: 0em 0em;
+        }
+
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
+    </style>
+</head>
+
+
+<body onload="startTime()">
+    <!--全页面背景-->
+    <div class="background"> </div>
+
+
+    <!--页眉与导航栏（开始）-->
+    <div class="ui inverted grey fixed menu" style="padding-right: 10%; padding-left: 10%;">
+        <!--单项菜单-->
+        <div class="header item">BitBitcode</div>
+        <a class="item" href="..\index.html"> 首 页 </a>
+        <a class="item" href="..\(0)Menu_Pages\(1)C_and_C++.html"> C/C++ </a>
+        <a class="item" href="..\(0)Menu_Pages\(2)CMD.html"> CMD </a>
+        <a class="item" href="..\(0)Menu_Pages\(3)Python.html"> Python </a>
+        <a class="item" href="..\(0)Menu_Pages\(4)Articles.html"> 文 章 </a>
+
+        <!--下拉菜单-->
+        <div tabindex="0" class="ui dropdown item">
+            更 多
+            <i class="dropdown icon"></i>
+            <div tabindex="-1" class="menu transition hidden">
+                <a class="item" href="sentence.html"> 有趣的话 </a>
+                <a class="active item" href="lyric.html"> 歌词分享 </a>
+                <a class="item" href="wallpaper.html"> 壁纸分享 </a>
+                <div class="divider"></div>
+                <a class="item" href="..\(0)Menu_Pages\(5)Others.html">其 他</a>
+                <div class="divider"></div>
+                <a class="item" href="..\README.md">关于本站</a>
+            </div>
+        </div>
+
+        <!--右边搜索栏和链接-->
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent inverted icon input">
+                    <input type="text" placeholder="搜索功能还未上线">
+                    <button class="ui grey icon button"><i class="search icon"></i></button>
+                </div>
+            </div>
+            <a class="item" href="http://github.com/BitBitcode">我的GitHub</a>
+        </div>
+    </div>
+    <!--页眉与导航栏（结束）-->
+
+
+    <!--正文部分（开始）-->
+    <div class="MFD_Light_Content">
+        <!--【幻灯片】（手动切换）-->
+        <div class="part">
+            <h2>幻灯片（手动切换）</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://c.runoob.com/wp-content/uploads/2017/01/img_mountains_wide.jpg" style="width:100%">
+                    <div class="text">文本 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://c.runoob.com/wp-content/uploads/2017/01/img_fjords_wide.jpg" style="width:100%">
+                    <div class="text">文本 2</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://c.runoob.com/wp-content/uploads/2017/01/img_nature_wide.jpg" style="width:100%">
+                    <div class="text">文本 3</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)"> ❮ </a>
+                <a class="next" onclick="plusSlides(1)"> ❯ </a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+        </div>
+
+
+        <!--【幻灯片】（自动切换）
+        <h2>幻灯片（手动切换）</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="..\images\崩坏学院2-琪亚娜.png" style="width:100%">
+                <div class="text">琪亚娜·卡斯兰娜（崩坏学院2）</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="..\images\LZLZ.png" style="width:100%">
+                <div class="text">布洛妮娅（理之律者）</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="..\images\白骑士-月光.png" style="width:100%">
+                <div class="text">琪亚娜·卡斯兰娜（崩坏3）</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000); // 切换时间为 3 秒
+            }
+        </script>
+        -->
+
+
+        <!--获取日期时间（根据计算机设定的日期时间）-->
+        <div class="part">
+            <h2>标准对象：获取日期时间</h2>
+
+            <button class="ui grey icon button" onclick="getnowdate()"><i class="clock icon"></i></button>
+            <span style="font-size: 1.1em;">按下按钮获取当前时间</span>
+            <div class="MFD_Light_Content" style="width: 100%; margin: 3% 0% 3% 0%; padding: 2em; text-align: left;">
+                <h3>显示器</h3>
+                <p id="display1">
+                    将弹窗显示
+                </p>
+            </div>
+
+            <script>
+                document.write("<h1>这是一个标题</h1>");
+                document.write("<p>这是一个段落</p>");
+                function getnowdate() {
+                    var now = new Date();
+                    now;                        // Wed Jun 24 2015 19:49:22 GMT+0800 (CST)
+                    now.getFullYear();          // 2015, 年份
+                    now.getMonth();             // 5, 月份，注意月份范围是0~11，5表示六月
+                    now.getDate();              // 24, 表示24号
+                    now.getDay();               // 3, 表示星期三
+                    now.getHours();             // 19, 24小时制
+                    now.getMinutes();           // 49, 分钟
+                    now.getSeconds();           // 22, 秒
+                    now.getMilliseconds();      // 875, 毫秒数
+                    now.getTime();              // 1435146562875, 以number形式表示的时间戳
+                    alert("现在日期时间：\n日期：" + now.getFullYear() + "." + now.getMonth() + "." + now.getDate() + "\n时间：" + now.getHours() + "." + now.getMinutes());
+                    console.log(now);
+                }
+            </script>
+        </div>
+
+
+
+
+
+        <!--在页面显示一个时钟（1）-->
+        <div class="part">
+            <!--【注意】需要在<body>加入“onload="startTime()"，并且只能在body标签”-->
+            <h2>在页面显示一个时钟（1）</h2>
+            <div class="MFD_Light_Content" style="width: 100%; margin: 3% 0% 3% 0%; padding: 4em; text-align: left;">
+                <div id="clock1"
+                    style="font-size: 4em; text-align: center; text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);"></div>
+            </div>
+
+            <script>
+                function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();// 在小于10的数字前加一个‘0’
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('clock1').innerHTML = h + ":" + m + ":" + s;
+                    t = setTimeout(function () { startTime() }, 500);
+                }
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+            </script>
+        </div>
+
+
+        <!--在页面显示一个时钟（2）-->
+        <div class="part">
+            <!---->
+            <h2>在页面显示一个时钟（2）</h2>
+            <div class="MFD_Light_Content" style="width: 100%; margin: 3% 0% 3% 0%; padding: 4em; text-align: left;">
+                <div id="clock2"
+                    style="font-size: 4em; text-align: center; text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);"></div>
+            </div>
+
+            <script>
+                var myVar = setInterval(function () { myTimer() }, 500);
+                function myTimer() {
+                    var d = new Date();
+                    var t = d.toLocaleTimeString();
+                    document.getElementById("clock2").innerHTML = t;
+                }
+            </script>
+        </div>
+
+
+        <!--  -->
+        <div class="part">
+            <h2>标准对象：改变网页内容、样式</h2>
+
+            <button id="id1" class="ui grey button"
+                onclick="document.getElementById('id1').style.color='royalblue'">变色</button>按下按钮会改变颜色
+            <button id="id2" class="ui grey button" onclick="secondnow()">秒表</button>获取当前秒数
+            <button id="id2" class="ui grey button" onclick="changestyle()">改变文字颜色</button>将改变段落颜色
+            <div class="MFD_Light_Content" style="width: 100%; margin: 3% 0% 3% 0%; padding: 2em; text-align: left;">
+                <h3>显示器</h3>
+                <p id="display2">
+                    按下按钮后的内容会显示在这里
+
+
+                </p>
+            </div>
+
+            <script>
+                function changestyle() {
+                    document.getElementById("display2").style.color = "skyblue";
+                }
+
+                function secondnow() {
+                    var now = new Date();
+
+                    now.getSeconds();
+                    document.getElementById("display2").innerHTML = "当前秒数：" + now.getSeconds();
+                    console.log(now);
+                }
+
+
+            </script>
+        </div>
+
+
+        <!--表单-->
+        <div class="part">
+            <form id="test-form">
+                <input type="text" name="test">
+                <button type="button" onclick="doSubmitForm()">Submit</button>
+                <br><br>
+            </form>
+            <!--单选/复选框-->
+            <input type="radio">男 <input type="radio">女
+            <br>
+            <input type="checkbox">多选 1
+            <br>
+            <input type="checkbox">多选 2
+            <br>
+            <input type="checkbox">多选 3
+            <br>
+            <!--日期选择框-->
+            <br>
+            <input type="date" value="2020-02-15">
+            <br><br>
+            <script>
+                function doSubmitForm() {
+                    var form = document.getElementById('test-form');
+                    // 可以在此修改form的input...
+                    // 提交form:
+                    // form.submit();
+                    alert("是否提交？");
+                    var x = 3;
+                    alert("输入了：" + form);
+                }
+            </script>
+
+            <form>
+                <input type="text" id="email">
+                <button type="button" onclick="">Submit</button>
+            </form>
+            <script>
+                var input = document.getElementById('email');
+                input.value = 'smilewwc@qq.com';    // 文本框的内容已更新
+            </script>
+        </div>
+    </div>
+    <!--正文部分（结束）-->
+
+
+    <!--页脚部分（开始）-->
+    <!--还可以借鉴GitHub的页脚：两边写字，中间有图标-->
+    <div class="ui inverted grey vertical four item footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">关 于</h4>
+                    <div class="ui inverted link list">
+                        <a class="item" href="https://github.com/">服务器支持：GitHub Pages</a>
+                        <a class="item" href="https://semantic-ui.com/">样式支持：Semantic UI</a>
+                        <a class="item" href="https://code.visualstudio.com/">开发软件：Visual Studio Code</a>
+                        <a class="item" href="https://github.com/BitBitcode/BitBitcode.github.io">项目开源：GitHub</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">联系作者</h4>
+                    <div class="ui inverted link list">
+                        <a class="item">E-mail: smilewwc@qq.com</a>
+                        <a class="item">Telephone：000000（示例）</a>
+                        <a class="item">邮编：111111（示例）</a>
+                        <a class="item">地址：中国-China</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">版权信息</h4>
+                    Semantic UI样式版权归原网站所有，请勿商用！<br>
+                    Copyright ©2019~2020 BitBitcode.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页脚部分（结束）-->
+</body>
+
+</html>
